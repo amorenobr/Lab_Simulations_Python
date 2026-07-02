@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 from src.lab_simulations_python.projectile import calculate_kinematics
 
 st.set_page_config(layout="wide")
@@ -29,15 +29,33 @@ if st.button("Run Simulation"):
     x = velocity_input * np.cos(angle_rad) * t
     y = velocity_input * np.sin(angle_rad) * t - 0.5 * g * t**2
 
-    fig, ax = plt.subplots()
-    ax.plot(x, y)
-    ax.set_title("Projectile Trajectory")
-    ax.set_xlabel("Range (m)")
-    ax.set_ylabel("Height (m)")
-    ax.grid(True)
-    ax.set_aspect('equal', adjustable='box')
-    ax.set_ylim(bottom=0)
-    st.pyplot(fig)
+    fig = go.Figure(
+            go.Scatter(
+                x=x,
+                y=y,
+                mode="lines",
+                hovertemplate="Range: %{x:.2f} m<br>Height: %{y:.2f} m<extra></extra>",
+                )
+            )
+
+    fig.update_layout(
+            title="Projectile Trajectory",
+            xaxis_title="Range (m)",
+            yaxis_title="Height (m)",
+            plot_bgcolor="white",
+            )
+
+    fig.update_xaxes(
+            range=[0, float(x.max()+1.0)],
+            ticks="outside", showgrid=True, gridcolor="lightgray",
+            zeroline=True, zerolinewidth=2, zerolinecolor="black",
+            )
+    fig.update_yaxes(
+            range=[0, float(y.max()+1.0)],
+            ticks="outside", showgrid=True, gridcolor="lightgray",
+            zeroline=True, zerolinewidth=2, zerolinecolor="black",
+            )
+    st.plotly_chart(fig, use_container_width=True)
 
     # Results
     st.subheader("Simulation Results")
