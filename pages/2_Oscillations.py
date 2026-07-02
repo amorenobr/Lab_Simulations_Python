@@ -5,7 +5,22 @@ from src.lab_simulations_python.oscillations import calculate_oscillation, displ
 
 st.set_page_config(layout="wide")
 st.title("Damped Harmonic Oscillator Simulation")
-st.write("Use the sidebar to adjust the simulation parameters and click 'Run Simulation' to see the results")
+st.markdown(
+        """
+        A **damped harmonic oscillator** models an object with a  mass $m$ on a spring of stiffness $k$,
+        with a damping force proportional to velocity (coefficient $b$). Its motion follows $m\\ddot{x} + b\\dot{x} + kx = 0$. 
+
+        The behavior is set by the **damping ratio** $\\xeta = \\dfrac{b}{2\\sqrt{km}}$, giving four regimes:
+
+        - **Undamped** ($\\zeta = 0$): oscillates forever at natural frequency $\\omega_0 = \\sqrt{k/m}$
+        - **Underdamped** ($\\zeta < 1$): oscillates with a decaying amplitude
+        - **Critically damped** ($\\zeta = 1$): returns to rest as fast as possible without oscillating
+        - **Overdamped** ($\\zeta > 1$): returns to rest slowly, no oscillation
+
+        Set the mass, stiffness, amplitude, and damping in the sidebar, then click **Run Simulation** to see 
+        the displacement over time
+        """
+        )
 
 # Sidebar for inputs
 st.sidebar.header("Simulation Parameters")
