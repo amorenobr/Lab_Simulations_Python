@@ -5,7 +5,23 @@ from src.lab_simulations_python.projectile import calculate_kinematics
 
 st.set_page_config(layout="wide")
 st.title("Projectile Motion Simulation")
-st.write("Use the sidebar to adjust the simulation parameters and click 'Run Simulation' to see the results")
+st.markdown(
+        """
+        **Projectile Motion** describes the path of an object launched into the air,
+        moving under the influence of gravity alone (air resistance is neglected). The horizontal and
+        vertical motions are independent: the horizontal velocity remains constant while the 
+        vertical motion accelerates downward with acceleration $g = 9.81\\ \\mathrm{m/s^2}$.
+
+        Given an initial speed $v_0$ and launch angle $\\theta$, the key quantities are:
+
+        - **Time of flight:** $t = \\dfrac{2 v_0 \\sin\\theta}{g}$
+        - **Maximum height:** $h = \\dfrac{v_0^2 \\sin^2\\theta}{2g}$
+        - **Horizontal range:** $R = \\dfrac{v_0^2 \\sin(2\\theta)}{g}$
+
+        Use the sidebar to set the initial speed and launch angle, then click **Run Simulation** 
+        to view the trajectory and calculated results.
+        """
+        )
 
 # Sidebar for inputs
 st.sidebar.header("Simulation Parameters")
@@ -55,7 +71,7 @@ if st.button("Run Simulation"):
             ticks="outside", showgrid=True, gridcolor="lightgray",
             zeroline=True, zerolinewidth=2, zerolinecolor="black",
             )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     # Results
     st.subheader("Simulation Results")
