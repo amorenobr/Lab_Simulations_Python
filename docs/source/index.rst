@@ -6,7 +6,33 @@
 Physics Lab Simulations Documentation
 =====================================
 
-This is the documentation for all the phsyics lab simulations
+This is the documentation for all the physics lab simulations. Each simulation is an interactive Streamlit app that lets you 
+modify physical parameters and see the results update in real time.
+
+Simulations
+-----------
+
+Projectile Motion
+~~~~~~~~~~~~~~~~~
+
+Models the flight of an object launched into the air under the influence of gravity alone, with air resistance
+neglected. The horizontal and vertical motions are treated independently: the horizontal velocity remains constant, while 
+the vertical motion accelerates downward at :math:`g = 9.81\ \mathrm{m/s^2}`. Given an initial speed and launch angle, 
+the app plots the trajectory and reports the time of flight, maximum height, and horizontal range. The underlying 
+calculations are implemented in the :mod:`projectile` module.
+
+
+Damped Harmonic Oscillator
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Models a mass on a spring subject to a damping force proportional to velocity, governed by :math:`m\ddot{x} + b\dot{x} + kx = 0`. 
+By varying the mass, spring stiffness, and damping coefficient, you can explore the four regimes of motion (undamped, 
+underdamped, critically damped, and overdamped), determined by the damping ratio :math:`\zeta = b / (2\sqrt{km})`. The app 
+plots displacement over time and reports the natural period, natural frequency, and damping ratio. The underlying calculations are implemented in the :mod:`oscillations` module.
+
+
+API Reference
+~~~~~~~~~~~~~
 
 Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
