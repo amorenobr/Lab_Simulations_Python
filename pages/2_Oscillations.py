@@ -7,18 +7,21 @@ st.set_page_config(layout="wide")
 st.title("Damped Harmonic Oscillator Simulation")
 st.markdown(
         """
-        A **damped harmonic oscillator** models an object with a  mass $m$ on a spring of stiffness $k$,
-        with a damping force proportional to velocity (coefficient $b$). Its motion follows $m\\ddot{x} + b\\dot{x} + kx = 0$. 
+        A **damped harmonic oscillator** models an object of a mass $m$ attached to a spring of stiffness $k$,
+        subject to a damping force proportional to its velocity (with damping coefficient $b$). Its motion 
+        follows $m\\ddot{x} + b\\dot{x} + kx = 0$. 
 
-        The behavior is set by the **damping ratio** $\\xeta = \\dfrac{b}{2\\sqrt{km}}$, giving four regimes:
+        The system's behavior is determined by the **damping ratio** $\\zeta = \\dfrac{b}{2\\sqrt{km}}$, which defines 
+        four regimes:
 
-        - **Undamped** ($\\zeta = 0$): oscillates forever at natural frequency $\\omega_0 = \\sqrt{k/m}$
-        - **Underdamped** ($\\zeta < 1$): oscillates with a decaying amplitude
-        - **Critically damped** ($\\zeta = 1$): returns to rest as fast as possible without oscillating
-        - **Overdamped** ($\\zeta > 1$): returns to rest slowly, no oscillation
+        - **Undamped** ($\\zeta = 0$): oscillates indefinitely at the natural frequency $\\omega_0 = \\sqrt{k/m}$
+        - **Underdamped** ($\\zeta < 1$): oscillates with a gradually decaying amplitude
+        - **Critically damped** ($\\zeta = 1$): returns to equilibrium as quickly as possible without oscillating
+        - **Overdamped** ($\\zeta > 1$): returns to equilibrium without oscillating, more slowly than 
+        the critically damped case
 
-        Set the mass, stiffness, amplitude, and damping in the sidebar, then click **Run Simulation** to see 
-        the displacement over time
+        Set the mass, stiffness, initial amplitude, and damping coefficient in the sidebar, then click **Run Simulation** 
+        to see the displacement over time
         """
         )
 
