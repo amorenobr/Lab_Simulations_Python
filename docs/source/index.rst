@@ -12,6 +12,16 @@ modify physical parameters and see the results update in real time.
 Simulations
 -----------
 
+
+Linear Motion
+~~~~~~~~~~~~~
+
+Models a particle moving along a straight line under constant acceleration. Given an initial position :math:`x_0`,
+initial velocity :math:`v_0`, constant acceleration :math:`a`, and elapsed time :math:`t`, the app plots position and
+velocity against time and reports the final position :math:`x_f = x_0 + v_0 t + \frac{1}{2} a t^2` and final velocity
+:math:`v_f = v_0 + a t`. The underlying calculations are implemented in the :mod:`linear_motion` module.
+
+
 Projectile Motion
 ~~~~~~~~~~~~~~~~~
 

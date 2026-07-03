@@ -1,6 +1,14 @@
 API Reference
 =============
 
+Linear Motion
+~~~~~~~~~~~~~
+
+.. automodule:: linear_motion
+      :members:
+      :undoc-members:
+      :show-inheritance:
+
 Projectile Motion
 -----------------
 

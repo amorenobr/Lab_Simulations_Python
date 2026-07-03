@@ -10,6 +10,9 @@ st.markdown(
         Each simulation allows you to adjust different physical parameters and see the results update in real time.
 
         ### Available Simulations
+        - **Linear Motion** - Model a particle moving in a straight line with constant acceleration. Set the initial
+        position, initial velocity, acceleration, and time to observe the position and velocity evolve over time and read 
+        off the final position and velocity.
         - **Projectile Motion** - Launch a projectile with a chosen speed and angle, then visualize its trajectory. 
         The simulation computes and displays the time of flight, maximum height, and horizontal range using the 
         kinematic equations.
