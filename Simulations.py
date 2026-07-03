@@ -6,7 +6,7 @@ st.title("Welcome to the Physics Lab Simulations")
 
 st.markdown(
         """
-        This is an interactive collection of physics lab simulations designed to exlore key concepts in classical mechanics.
+        This is an interactive collection of physics lab simulations designed to explore key concepts in classical mechanics.
         Each simulation allows you to adjust different physical parameters and see the results update in real time.
 
         ### Available Simulations
@@ -21,6 +21,11 @@ st.markdown(
         1. Select a simulation from the **Sidebar** on the left
         2. Adjust the physical parameters using the sliders
         3. Click **Run Simulation** to generate the plot and view the results
+
+        ### Documentation
+
+        Full API and simulation documentation is available
+        [here](https://amorenobr.github.io/Lab_Simulations_Python/docs/).
 
 
         """
