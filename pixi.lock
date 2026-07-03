@@ -1224,7 +1224,7 @@ packages:
 - pypi: ./
   name: lab-simulations-python
   version: 0.1.0
-  sha256: 59c21a1d5ea0635ae871a55e525ce7e72214530de03747d22be42700582e1da1
+  sha256: d273d2396313dad84d64d24b64cb8b76c9c05052424c3a8aacf5c049ef4bf774
   requires_python: '>=3.11'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/linux-64/lcms2-2.18-h0c24ade_0.conda
