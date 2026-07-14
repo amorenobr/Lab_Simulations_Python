@@ -1,4 +1,7 @@
 import streamlit as st
+from pathlib import Path
+
+_LOGO = Path(__file__).resolve().parents[2] / "assets" / "LogoUAN.png"
 
 LANGUAGES = {"English": "en", "Español": "es"}
 
@@ -139,6 +142,8 @@ TRANSLATIONS = {
             "regime_underdamped": "underdamped",
             "regime_critically damped": "critically damped",
             "regime_overdamped": "overdamped",
+
+            "developed_by": "Developed by **Alexander Moreno Briceño** - Universidad Antonio Nariño",
             },
         "es": {
             "app_title": "Bienvenido a las Simulaciones de Laboratorio de Física",
@@ -275,6 +280,8 @@ TRANSLATIONS = {
             "regime_underdamped": "subamortiguado",
             "regime_critically damped": "con amortiguamiento crítico",
             "regime_overdamped": "sobreamortiguado",
+
+            "developed_by": "Desarrollado por **Alexander Moreno Briceño** - Universidad Antonio Nariño",
             },
         }
 
@@ -295,6 +302,8 @@ def language_selector() -> None:
                 [data-testid="stAppViewContainer"] { scrollbar-gutter: stable; }
                 </style>""",
                 unsafe_allow_html=True)
+    if _LOGO.exists():
+        st.sidebar.image(str(_LOGO), width=600)
     choice = st.sidebar.radio(
             "🌐 Language / Idioma",
             list(LANGUAGES.keys()),
