@@ -81,7 +81,10 @@ Lab_Simulations_Python/
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+The Universidad Antonio Nariño logo (`assets/LogoUAN.png`) is a trademark of Universidad Antonio Nariño 
+and is **not** covered by the MIT License. All rights to the logo remain with its owner.
 
 ## Author
 
