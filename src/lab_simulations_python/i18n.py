@@ -168,7 +168,7 @@ TRANSLATIONS = {
             masa, la rigidez y el coeficiente de amortiguamiento para observar movimiento no amortiguado, 
             subamortiguado, con amortiguamiento crítico y sobreamortiguado.
 
-            ### Cómo usar
+            ### Cómo usar la app
             1. Selecciona una simulación en la **barra lateral** de la izquierda
             2. Ajusta los parámetros físicos con los deslizadores
             3. Haz click en **Ejecutar simulación** para generar la gráfica y ver los resultados
