@@ -6,6 +6,10 @@ TRANSLATIONS = {
         "en": {
             "app_title": "Welcome to the Physics Lab Simulations",
             "sidebar_select": "Select a simulation above",
+            "nav_home": "Home",
+            "nav_linear": "Linear Motion",
+            "nav_projectile": "Projectile Motion",
+            "nav_oscillator": "Damped Oscillator",
             "landing_body": """
             This is an interactive collection of physics lab simulations designed to explore key concepts 
             in classical mechanics. Each simulation allows you to adjust different physical parameters 
@@ -139,6 +143,10 @@ TRANSLATIONS = {
         "es": {
             "app_title": "Bienvenido a las Simulaciones de Laboratorio de Física",
             "sidebar_select": "Selecciona una simulación arriba",
+            "nav_home": "Inicio",
+            "nav_linear": "Movimiento Rectilíneo",
+            "nav_projectile": "Movimiento de Proyectil",
+            "nav_oscillator": "Oscilador Amortiguado",
             "landing_body": """
             Esta es una colección interactiva de simulaciones de laboratorio de física diseñada para explorar 
             conceptos clave de la mecánica clásica. Cada simulación te permite ajustar diferentes parámetros 
@@ -280,9 +288,13 @@ def t(key: str) -> str:
     return TRANSLATIONS.get(lang, {}).get(key) or TRANSLATIONS["en"].get(key, key)
 
 def language_selector() -> None:
-    """Render the language toggle in the sidebar and store the choice in session_state."""
-    st.markdown("""<style> section[data-testid="stMain"], [data-testid="stAppViewContainer"]
-            { scrollbar-gutter: stable; } </style>""", unsafe_allow_html=True)
+    """Render the sidebar: hide the default nav, add language toggle + translated nav."""
+    st.markdown("""<style> 
+                [data-testid="stSidebarNav"] { display: none; }
+                section[data-testid="stMain"],
+                [data-testid="stAppViewContainer"] { scrollbar-gutter: stable; }
+                </style>""",
+                unsafe_allow_html=True)
     choice = st.sidebar.radio(
             "🌐 Language / Idioma",
             list(LANGUAGES.keys()),
@@ -290,3 +302,9 @@ def language_selector() -> None:
             key="lang_selector",
             )
     st.session_state["lang"] = LANGUAGES[choice]
+
+    # Translated page navigation (replaces the hidden, English-only default nav)
+    st.sidebar.page_link("Simulations.py", label=t("nav_home"), icon="🏠")
+    st.sidebar.page_link("pages/1_Linear_Motion.py", label=t("nav_linear"), icon="➡️")
+    st.sidebar.page_link("pages/2_Projectile_Motion.py", label=t("nav_projectile"), icon="🎯")
+    st.sidebar.page_link("pages/3_Oscillations.py", label=t("nav_oscillator"), icon="🌊")
