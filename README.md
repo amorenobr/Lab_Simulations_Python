@@ -2,7 +2,8 @@
 
 Interactive physics lab simulations built with Python and Streamlit for exploring
 core concepts in classical mechanics. Adjust physical parameters with sliders and 
-watch the results update in real time.
+watch the results update in real time. Available in **English and Spanish** with a 
+one-click language toggle.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -11,6 +12,9 @@ watch the results update in real time.
 
 ## Simulations
 
+- **Linear Motion** - A particle moving in a straight line with constant acceleration. 
+Set the initial position, velocity, acceleration, and time to watch position and 
+velocity evolve and read off the final values.
 - **Projectile Motion** - Launch a projectile at a chosen speed and angle and 
 visualize its trajectory. Computes time of flight, maximum height, and horizontal 
 range from the kinematic equations.
@@ -60,7 +64,8 @@ The HTML output is written to `docs/build/html`.
 Lab_Simulations_Python/
 ├── Simulations.py                  # Streamlit landing page
 ├── pages/                          # One file per simulation
-├── src/lab_simulations_python/     # Physics engines (importable package)
+├── src/lab_simulations_python/     # Physics engines + i18n (importable package)
+├── assets/                         # Logo and static assets
 ├── tests/                          # Pytest suite
 ├── docs/                           # Sphinx documentation
 └── index.html                      # stlite (WebAssembly) build for GitHub Pages
