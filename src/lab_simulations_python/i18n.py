@@ -97,6 +97,44 @@ TRANSLATIONS = {
             "pj_time_of_flight": "Time of Flight", 
             "pj_max_height": "Maximum Height", 
             "pj_horizontal_range": "Horizontal Range",
+
+            # --- Oscillations ---
+            "osc_title": "Damped Harmonic Oscillator Simulation",
+            "osc_intro": """
+            A **damped harmonic oscillator** models an object of a mass $m$ attached to a spring of stiffness $k$, 
+            subject to a damping force proportional to its velocity (with damping coefficient $b$). Its motion 
+            follows $m\\ddot{x} + b\\dot{x} + kx = 0$. 
+
+            The system's behavior is determined by the **damping ratio** $\\zeta = \\dfrac{b}{2\\sqrt{km}}$, which defines 
+            four regimes:
+
+            - **Undamped** ($\\zeta = 0$): oscillates indefinitely at the natural frequency $\\omega_0 = \\sqrt{k/m}$
+            - **Underdamped** ($\\zeta < 1$): oscillates with a gradually decaying amplitude
+            - **Critically damped** ($\\zeta = 1$): returns to equilibrium as quickly as possible without oscillating
+            - **Overdamped** ($\\zeta > 1$): returns to equilibrium without oscillating, more slowly than 
+            the critically damped case 
+
+            Set the mass, stiffness, initial amplitude, and damping coefficient in the sidebar, then click **Run Simulation** 
+            to see the displacement over time.
+            """,
+
+            "osc_mass": "Mass (kg)",
+            "osc_spring": "Spring Constant k (N/m)",
+            "osc_amplitude": "Initial Amplitude (m)",
+            "osc_damping": "Damping Coefficient b (kg/s)",
+            "osc_current_params": "Current parameters: mass **{m} kg**, k **{k} N/m**, amplitude **{amp} m**, damping **{b} kg/s**",
+            "osc_displacement_vs_time": "Displacement vs. Time",
+            "osc_plot_title": "Oscillator Displacement",
+            "osc_displacement_axis": "Displacement (m)",
+            "osc_hover": "Time: %{x:.2f} s<br>Displacement: %{y:.3f} m<extra></extra>",
+            "osc_complete_regime": "Simulation complete — regime: **{regime}**",
+            "osc_natural_period": "Natural Period",
+            "osc_natural_frequency": "Natural Frequency",
+            "osc_damping_ratio": "Damping Ratio",
+            "regime_undamped": "undamped",
+            "regime_underdamped": "underdamped",
+            "regime_critically damped": "critically damped",
+            "regime_overdamped": "overdamped",
             },
         "es": {
             "app_title": "Bienvenido a las Simulaciones de Laboratorio de Física",
@@ -191,6 +229,44 @@ TRANSLATIONS = {
             "pj_time_of_flight": "Tiempo de vuelo",
             "pj_max_height": "Altura máxima",
             "pj_horizontal_range": "Alcance horizontal",
+
+            # --- Oscillations ---
+            "osc_title": "Simulación de Oscilador Armónico Amortiguado",
+            "osc_intro": """
+            Un **oscilador armónico amortiguado** modela un objeto de masa $m$ unido a un resorte de rigidez $k$, sujeto a 
+            una fuerza de amortiguamiento proporcional a su velocidad (con coeficiente de amortiguamiento $b$). Su movimiento 
+            sigue $m\\ddot{x} + b\\dot{x} + kx = 0$.
+
+            El comportamiento del sistema está determinado por la **razón de amortiguamiento** $\\zeta = \\dfrac{b}{2\\sqrt{km}}$, 
+            que define cuatro regímenes:
+            
+            - **No amortiguado** ($\\zeta = 0$): oscila indefinidamente a la frecuencia natural $\\omega_0 = \\sqrt{k/m}$
+            - **Subamortiguado** ($\\zeta < 1$): oscila con una amplitud que decae gradualmente
+            - **Amortiguamiento crítico** ($\\zeta = 1$): regresa al equilibrio lo más rápido posible sin oscilar
+            - **Sobreamortiguado** ($\\zeta > 1$): regresa al equilibrio sin oscilar, más lentamente que el caso de 
+            amortiguamiento crítico
+
+            Define la masa, la rigidez, la amplitud inicial y el coeficiente de amortiguamiento en la barra lateral; luego 
+            haz clic en **Ejecutar Simulación** para ver el desplazamiento en el tiempo.
+            """,
+
+            "osc_mass": "Masa (kg)",
+            "osc_spring": "Constante del resorte k (N/m)",
+            "osc_amplitude": "Amplitud inicial (m)",
+            "osc_damping": "Coeficiente de amortiguamiento b (kg/s)",
+            "osc_current_params": "Parámetros actuales: masa **{m} kg**, k **{k} N/m**, amplitud **{amp} m**, amortiguamiento **{b} kg/s**",
+            "osc_displacement_vs_time": "Desplazamiento vs. Tiempo",
+            "osc_plot_title": "Desplazamiento del oscilador",
+            "osc_displacement_axis": "Desplazamiento (m)",
+            "osc_hover": "Tiempo: %{x:.2f} s<br>Desplazamiento: %{y:.3f} m<extra></extra>",
+            "osc_complete_regime": "Simulación completa — régimen: **{regime}**",
+            "osc_natural_period": "Periodo natural",
+            "osc_natural_frequency": "Frecuencia natural",
+            "osc_damping_ratio": "Razón de amortiguamiento",
+            "regime_undamped": "no amortiguado",
+            "regime_underdamped": "subamortiguado",
+            "regime_critically damped": "con amortiguamiento crítico",
+            "regime_overdamped": "sobreamortiguado",
             },
         }
 

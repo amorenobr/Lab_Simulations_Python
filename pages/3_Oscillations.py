@@ -2,69 +2,51 @@ import streamlit as st
 import numpy as np
 import plotly.graph_objects as go
 from src.lab_simulations_python.oscillations import calculate_oscillation, displacement
+from src.lab_simulations_python.i18n import t, language_selector
 
 st.set_page_config(layout="wide")
-st.title("Damped Harmonic Oscillator Simulation")
-st.markdown(
-        """
-        A **damped harmonic oscillator** models an object of a mass $m$ attached to a spring of stiffness $k$,
-        subject to a damping force proportional to its velocity (with damping coefficient $b$). Its motion 
-        follows $m\\ddot{x} + b\\dot{x} + kx = 0$. 
 
-        The system's behavior is determined by the **damping ratio** $\\zeta = \\dfrac{b}{2\\sqrt{km}}$, which defines 
-        four regimes:
+language_selector()
 
-        - **Undamped** ($\\zeta = 0$): oscillates indefinitely at the natural frequency $\\omega_0 = \\sqrt{k/m}$
-        - **Underdamped** ($\\zeta < 1$): oscillates with a gradually decaying amplitude
-        - **Critically damped** ($\\zeta = 1$): returns to equilibrium as quickly as possible without oscillating
-        - **Overdamped** ($\\zeta > 1$): returns to equilibrium without oscillating, more slowly than 
-        the critically damped case
-
-        Set the mass, stiffness, initial amplitude, and damping coefficient in the sidebar, then click **Run Simulation** 
-        to see the displacement over time
-        """
-        )
+st.title(t("osc_title"))
+st.markdown(t("osc_intro"))
 
 # Sidebar for inputs
-st.sidebar.header("Simulation Parameters")
-mass = st.sidebar.slider("Mass (kg)", 0.1, 10.0, 1.0)
-spring_constant = st.sidebar.slider("Spring Constant k (N/m)", 1.0, 100.0, 20.0)
-amplitude = st.sidebar.slider("Initial Amplitude (m)", 0.1, 5.0, 1.0)
-damping = st.sidebar.slider("Damping Coefficient b (kg/s)", 0.0, 20.0, 0.5)
+st.sidebar.header(t("sim_parameters"))
+mass = st.sidebar.slider(t("osc_mass"), 0.1, 10.0, 1.0)
+spring_constant = st.sidebar.slider(t("osc_spring"), 1.0, 100.0, 20.0)
+amplitude = st.sidebar.slider(t("osc_amplitude"), 0.1, 5.0, 1.0)
+damping = st.sidebar.slider(t("osc_damping"), 0.0, 20.0, 0.5)
 
-st.write(
-        f"Current parameters: mass **{mass} kg**, k **{spring_constant} N/m**, "
-        f"Amplitude **{amplitude} m**, damping **{damping} kg/s**"
-        )
+st.write(t("osc_current_params").format(m=mass, k=spring_constant, amp=amplitude, b=damping))
 
 # Main Simulation
-if st.button("Run Simulation"):
+if st.button(t("run_simulation")):
     props = calculate_oscillation(mass, spring_constant, damping)
 
-    t = np.linspace(0, 6 * props["period"], num=1000)
-    x = displacement(t, mass, spring_constant, amplitude, damping)
+    t_arr = np.linspace(0, 6 * props["period"], num=1000)
+    x = displacement(t_arr, mass, spring_constant, amplitude, damping)
     
     # Plotting
-    st.subheader("Displacement vs. Time")
+    st.subheader(t("osc_displacement_vs_time"))
 
     fig = go.Figure(
             go.Scatter(
-                x=t,
+                x=t_arr,
                 y=x,
                 mode="lines",
-                hovertemplate="Time: %{x:.2f} s<br>Displacement: %{y:.3f} m<extra></extra>",
-                )
+                hovertemplate=t("osc_hover"))
             )
 
     fig.update_layout(
-            title="Oscillator Displacement",
-            xaxis_title="Time (s)",
-            yaxis_title="Displacement (m)",
+            title=t("osc_plot_title"),
+            xaxis_title=t("time_s"),
+            yaxis_title=t("osc_displacement_axis"),
             plot_bgcolor="white",
             )
 
     fig.update_xaxes(
-            range=[0, float(t.max()+1.0)],
+            range=[0, float(t_arr.max()+1.0)],
             ticks="outside", showgrid=True, gridcolor="lightgray",
             zeroline=True, zerolinewidth=2, zerolinecolor="black",
             )
@@ -75,10 +57,11 @@ if st.button("Run Simulation"):
     st.plotly_chart(fig, width="stretch")
 
     # Results
-    st.subheader("Simulation Results")
-    st.success(f"Simulation Complete = regime: **{props['regime']}**")
+    st.subheader(t("sim_results"))
+    regime_label = t(f"regime_{props['regime']}")
+    st.success(t("osc_complete_regime").format(regime=regime_label))
 
     col1, col2, col3 = st.columns(3)
-    col1.metric("Natural Period", f"{props['period']:.2f} s")
-    col2.metric("Natural Frequency", f"{props['natural_frequency']:.2f} Hz")
-    col3.metric("Damping Ratio", f"{props['damping_ratio']:.2f}")
+    col1.metric(t("osc_natural_period"), f"{props['period']:.2f} s")
+    col2.metric(t("osc_natural_frequency"), f"{props['natural_frequency']:.2f} Hz")
+    col3.metric(t("osc_damping_ratio"), f"{props['damping_ratio']:.2f}")
