@@ -31,6 +31,42 @@ TRANSLATIONS = {
             Full API and simulation documentation is available
             [here](https://amorenobr.github.io/Lab_Simulations_Python/docs/).
             """,
+
+            # --- Shared UI ---
+            "sim_parameters": "Simulation Parameters",
+            "run_simulation": "Run Simulation",
+            "plots": "Plots",
+            "sim_results": "Simulation Results",
+            "sim_complete": "Simulation Complete!",
+            "time_s": "Time (s)",
+
+            # --- Linear Motion ---
+            "lm_title": "Linear Motion Simulation",
+            "lm_intro": """
+            **Linear Motion** describes the path of an object on X with a constant acceleration. 
+
+            Given an initial position $x_0$, and initial velocity $v_0$, a constant acceleration $a$, 
+            and a time $t$, we obtain:
+
+            - **Final position:** $x_f = x_0 + (v_0 * t) + \\dfrac{1}{2}*a*t^2$ 
+            - **Final velocity:** $v_f = v_0 + a * t$
+
+            Use the sidebar to set the initial position, initial velocity, constant acceleration and 
+            time, then click the "Run Simulation" to view the plots and calculated results.
+            """,
+
+            "lm_position": "Initial Position (m)",
+            "lm_velocity": "Initial Velocity (m/s)",
+            "lm_acceleration": "Constant Acceleration (m/s²)",
+            "lm_current_params": "Current parameters: **{p} m**, **{v} m/s**, **{a} m/s²** and **{tm} s**",
+            "lm_pos_vs_time": "Position vs. Time",
+            "lm_vel_vs_time": "Velocity vs. Time",
+            "lm_position_axis": "Position (m)",
+            "lm_velocity_axis": "Velocity (m/s)",
+            "lm_hover_position": "Time: %{x:.2f} s<br>Position: %{y:.2f} m<extra></extra>",
+            "lm_hover_velocity": "Time: %{x:.2f} s<br>Velocity: %{y:.2f} m/s<extra></extra>",
+            "lm_final_position": "Final Position",
+            "lm_final_velocity": "Final Velocity",
             },
         "es": {
             "app_title": "Bienvenido a las Simulaciones de Laboratorio de Física",
@@ -60,6 +96,42 @@ TRANSLATIONS = {
             La documentación completa de la API y las simulaciones están
             disponibles [aquí](https://amorenobr.github.io/Lab_Simulations_Python/docs/).
             """,
+
+            # --- Shared UI ---
+            "sim_parameters": "Parámetros de la Simulación",
+            "run_simulation": "Ejecutar Simulación",
+            "plots": "Gráficas",
+            "sim_results": "Resultados de la Simulación",
+            "sim_complete": "Simulación Completa!",
+            "time_s": "Tiempo (s)",
+
+            # --- Linear Motion ---
+            "lm_title": "Simulación de Movimiento Rectilíneo",
+            "lm_intro": """
+            El **movimiento rectilíneo** describe la trayectoria de un objeto a lo largo de X con aceleración constante. 
+
+            Dada una posición inicial $x_0$, una velocidad inicial $v_0$, una aceleración constante $a$ y un tiempo $t$, 
+            obtenemos:
+
+            - **Posición final:** $x_f = x_0 + v_0 t + \\dfrac{1}{2} a t^2$
+            - **Velocidad final:** $v_f = v_0 + a t$ 
+
+            Usa la barra lateral para definir la posición inicial, la velocidad inicial, la aceleración constante y el 
+            tiempo; luego haz clic en **Ejecutar Simulación** para ver las gráficas y los resultados.
+            """,
+            
+            "lm_position": "Posición inicial (m)", 
+            "lm_velocity": "Velocidad inicial (m/s)", 
+            "lm_acceleration": "Aceleración constante (m/s²)", 
+            "lm_current_params": "Parámetros actuales: **{p} m**, **{v} m/s**, **{a} m/s²** y **{tm} s**", 
+            "lm_pos_vs_time": "Posición vs. Tiempo", 
+            "lm_vel_vs_time": "Velocidad vs. Tiempo", 
+            "lm_position_axis": "Posición (m)", 
+            "lm_velocity_axis": "Velocidad (m/s)", 
+            "lm_hover_position": "Tiempo: %{x:.2f} s<br>Posición: %{y:.2f} m<extra></extra>", 
+            "lm_hover_velocity": "Tiempo: %{x:.2f} s<br>Velocidad: %{y:.2f} m/s<extra></extra>", 
+            "lm_final_position": "Posición final", 
+            "lm_final_velocity": "Velocidad final",
             },
         }
 
