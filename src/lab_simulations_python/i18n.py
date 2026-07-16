@@ -369,5 +369,6 @@ def language_selector() -> None:
     # Translated page navigation (replaces the hidden, English-only default nav)
     st.sidebar.page_link("Simulations.py", label=t("nav_home"), icon="🏠")
     st.sidebar.page_link("pages/1_Linear_Motion.py", label=t("nav_linear"), icon="➡️")
-    st.sidebar.page_link("pages/2_Projectile_Motion.py", label=t("nav_projectile"), icon="🎯")
-    st.sidebar.page_link("pages/3_Oscillations.py", label=t("nav_oscillator"), icon="🌊")
+    st.sidebar.page_link("pages/2_Free_Fall.py", label=t("nav_fall"), icon="")
+    st.sidebar.page_link("pages/3_Projectile_Motion.py", label=t("nav_projectile"), icon="🎯")
+    st.sidebar.page_link("pages/4_Oscillations.py", label=t("nav_oscillator"), icon="🌊")

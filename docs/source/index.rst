@@ -22,6 +22,15 @@ velocity against time and reports the final position :math:`x_f = x_0 + v_0 t + 
 :math:`v_f = v_0 + a t`. The underlying calculations are implemented in the :mod:`linear_motion` module.
 
 
+Free Fall
+~~~~~~~~~
+
+Models a particle moving along a vertical straight line under gravity acceleration, with air resistance neglected. 
+It accelerates downward at :math:`g = 9.81 \mathrm{m/s^2}`. Given an initial height :math:`y_0` and an initial 
+velocity :math:`v_0` (positive upward), we obtain the height :math:`y = y_0 + v_0 t - \frac{1}{2} g t^2` and 
+velocity :math:`v = v_0 - g t`. The underlying calculations are implemented in the :mod:`free_fall` module.
+
+
 Projectile Motion
 ~~~~~~~~~~~~~~~~~
 

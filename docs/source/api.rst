@@ -2,9 +2,17 @@ API Reference
 =============
 
 Linear Motion
-~~~~~~~~~~~~~
+-------------
 
 .. automodule:: linear_motion
+      :members:
+      :undoc-members:
+      :show-inheritance:
+
+Free Fall
+---------
+
+.. automodule:: free_fall
       :members:
       :undoc-members:
       :show-inheritance:
