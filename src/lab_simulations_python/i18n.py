@@ -59,7 +59,7 @@ TRANSLATIONS = {
             - **Final velocity:** $v_f = v_0 + a * t$
 
             Use the sidebar to set the initial position, initial velocity, constant acceleration and 
-            time, then click the "Run Simulation" to view the plots and calculated results.
+            time, then click the **Run Simulation** to view the plots and calculated results.
             """,
 
             "lm_position": "Initial Position (m)",
@@ -74,6 +74,33 @@ TRANSLATIONS = {
             "lm_hover_velocity": "Time: %{x:.2f} s<br>Velocity: %{y:.2f} m/s<extra></extra>",
             "lm_final_position": "Final Position",
             "lm_final_velocity": "Final Velocity",
+
+            # --- Free Fall ---
+            "ff_title": "Free Fall Simulation",
+            "ff_intro": """
+            **Free Fall** describes the vertical motion of an object under gravity alone, with air resistance 
+            neglected. It accelerates downward at $g = 9.81\\ \\mathrm{m/s^2}$
+
+            Given an initial height $y_0$ and initial velocity $v_0$ (positive upward), we obtain:
+
+            - **Height:** $y = y_0 + v_0 t -\\dfrac{1}{2} g t^2$
+            - **Velocity:** $v = v_0 - g t$
+
+            Use the sidebar to set the initial height, initial velocity, and time, then click the **Run 
+            Simulation** to view the plots and results.
+            """,
+
+            "ff_position": "Initial Height (m)",
+            "ff_velocity": "Initial Velocity (m/s)",
+            "ff_current_params": "Current parameters: **{p} m**, **{v} m/s** and **{tm} s**",
+            "ff_pos_vs_time": "Height vs. Time",
+            "ff_vel_vs_time": "Velocity vs. Time",
+            "ff_position_axis": "Height (m)",
+            "ff_velocity_axis": "Velocity (m/s)",
+            "ff_hover_position": "Time: %{x:.2f} s<br>Height: %{y:.2f} m<extra></extra>",
+            "ff_hover_velocity": "Time: %{x:.2f} s<br>Velocity: %{y:.2f} m/s<extra></extra>",
+            "ff_final_position": "Final Height",
+            "ff_final_velocity": "Final Velocity",
 
             # --- Projectile Motion ---
             "pj_title": "Projectile Motion Simulation",
@@ -213,6 +240,33 @@ TRANSLATIONS = {
             "lm_hover_velocity": "Tiempo: %{x:.2f} s<br>Velocidad: %{y:.2f} m/s<extra></extra>", 
             "lm_final_position": "Posición final", 
             "lm_final_velocity": "Velocidad final",
+
+            # --- Free Fall ---
+            "ff_title": "Simulación de Caída Libre",
+            "ff_intro": """
+            **Caída Libre** describe el movimiento vertical de un objeto bajo la acción de la gravedad únicamente, 
+            despreciando la resistencia del aire. Acelera hacia abajo a $g = 9.81\\ \\mathrm{m/s^2}$.
+
+            Dada una altura inicial $y_0$ y una velocidad inicial $v_0$ (positiva hacia arriba), obtenemos:
+
+            - **Altura:** $y = y_0 + v_0 t -\\dfrac{1}{2} g t^2$
+            - **Velocidad:** $v = v_0 - g t$
+
+            Usa la barra lateral para definir la altura inicial, la velocidad inicial y el tiempo; luego haz clic 
+            en **Ejecutar Simulación** para ver las gráficas y los resultados.
+            """,
+
+            "ff_position": "Altura Inicial (m)",
+            "ff_velocity": "Velocidad Inicial (m/s)",
+            "ff_current_params": "Parámetros actuales: **{p} m**, **{v} m/s** and **{tm} s**",
+            "ff_pos_vs_time": "Altura vs. Tiempo",
+            "ff_vel_vs_time": "Velocidad vs. Tiempo",
+            "ff_position_axis": "Altura (m)",
+            "ff_velocity_axis": "Velocidad (m/s)",
+            "ff_hover_position": "Tiempo: %{x:.2f} s<br>Altura: %{y:.2f} m<extra></extra>",
+            "ff_hover_velocity": "Tiempo: %{x:.2f} s<br>Velocidad: %{y:.2f} m/s<extra></extra>",
+            "ff_final_position": "Altura Final",
+            "ff_final_velocity": "Velocidad Final",
 
             # --- Projectile Motion ---
             "pj_title": "Simulación de Movimiento de Proyectil",
