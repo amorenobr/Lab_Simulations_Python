@@ -11,6 +11,7 @@ TRANSLATIONS = {
             "sidebar_select": "Select a simulation above",
             "nav_home": "Home",
             "nav_linear": "Linear Motion",
+            "nav_fall": "Free Fall",
             "nav_projectile": "Projectile Motion",
             "nav_oscillator": "Damped Oscillator",
             "landing_body": """
@@ -177,6 +178,7 @@ TRANSLATIONS = {
             "sidebar_select": "Selecciona una simulación arriba",
             "nav_home": "Inicio",
             "nav_linear": "Movimiento Rectilíneo",
+            "nav_fall": "Caída Libre",
             "nav_projectile": "Movimiento de Proyectil",
             "nav_oscillator": "Oscilador Amortiguado",
             "landing_body": """
@@ -369,6 +371,6 @@ def language_selector() -> None:
     # Translated page navigation (replaces the hidden, English-only default nav)
     st.sidebar.page_link("Simulations.py", label=t("nav_home"), icon="🏠")
     st.sidebar.page_link("pages/1_Linear_Motion.py", label=t("nav_linear"), icon="➡️")
-    st.sidebar.page_link("pages/2_Free_Fall.py", label=t("nav_fall"), icon="")
+    st.sidebar.page_link("pages/2_Free_Fall.py", label=t("nav_fall"), icon="⬇️")
     st.sidebar.page_link("pages/3_Projectile_Motion.py", label=t("nav_projectile"), icon="🎯")
     st.sidebar.page_link("pages/4_Oscillations.py", label=t("nav_oscillator"), icon="🌊")
