@@ -1,7 +1,9 @@
-import numpy as np
 from typing import Dict
 
-def calculate_linear_motion(initial_position: float, initial_velocity: float, acceleration: float, time: float=0.0) -> Dict[str, float]:
+
+def calculate_linear_motion(
+    initial_position: float, initial_velocity: float, acceleration: float, time: float = 0.0
+) -> Dict[str, float]:
     """
     Calculates the kinematic values for linear motion
 
@@ -15,10 +17,10 @@ def calculate_linear_motion(initial_position: float, initial_velocity: float, ac
         A dictionary containing the final position and the final velocity
     """
 
-    final_position = initial_position + (initial_velocity * time ) + (0.5 * acceleration * time**2)
+    final_position = initial_position + (initial_velocity * time) + (0.5 * acceleration * time**2)
     final_velocity = initial_velocity + (acceleration * time)
 
     return {
-            "final_position": final_position,
-            "final_velocity": final_velocity,
-            }
+        "final_position": final_position,
+        "final_velocity": final_velocity,
+    }

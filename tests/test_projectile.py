@@ -1,6 +1,8 @@
-import pytest
 import numpy as np
+import pytest
+
 from src.lab_simulations_python.projectile import calculate_kinematics
+
 
 def test_projectile_kinematics():
     """
@@ -14,7 +16,7 @@ def test_projectile_kinematics():
     g = 9.81
     angle_rad = np.deg2rad(launch_angle)
     expected_t_flight = (2 * initial_velocity * np.sin(angle_rad)) / g
-    expected_max_height = (initial_velocity**2 * np.sin(angle_rad)**2) / (2 * g)
+    expected_max_height = (initial_velocity**2 * np.sin(angle_rad) ** 2) / (2 * g)
     expected_range = (initial_velocity**2 * np.sin(2 * angle_rad)) / g
 
     # Get actual results from the function

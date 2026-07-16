@@ -1,8 +1,9 @@
-import streamlit as st
 import numpy as np
 import plotly.graph_objects as go
+import streamlit as st
+
+from src.lab_simulations_python.i18n import language_selector, t
 from src.lab_simulations_python.projectile import calculate_kinematics
-from src.lab_simulations_python.i18n import t, language_selector
 
 st.set_page_config(layout="wide")
 
@@ -33,31 +34,33 @@ if st.button(t("run_simulation")):
     x = velocity_input * np.cos(angle_rad) * t_arr
     y = velocity_input * np.sin(angle_rad) * t_arr - 0.5 * g * t_arr**2
 
-    fig = go.Figure(
-            go.Scatter(
-                x=x,
-                y=y,
-                mode="lines",
-                hovertemplate=t("pj_hover"))
-            )
+    fig = go.Figure(go.Scatter(x=x, y=y, mode="lines", hovertemplate=t("pj_hover")))
 
     fig.update_layout(
-            title=t("pj_traj_title"),
-            xaxis_title=t("pj_range_axis"),
-            yaxis_title=t("pj_height_axis"),
-            plot_bgcolor="white",
-            )
+        title=t("pj_traj_title"),
+        xaxis_title=t("pj_range_axis"),
+        yaxis_title=t("pj_height_axis"),
+        plot_bgcolor="white",
+    )
 
     fig.update_xaxes(
-            range=[0, float(x.max()+1.0)],
-            ticks="outside", showgrid=True, gridcolor="lightgray",
-            zeroline=True, zerolinewidth=2, zerolinecolor="black",
-            )
+        range=[0, float(x.max() + 1.0)],
+        ticks="outside",
+        showgrid=True,
+        gridcolor="lightgray",
+        zeroline=True,
+        zerolinewidth=2,
+        zerolinecolor="black",
+    )
     fig.update_yaxes(
-            range=[0, float(y.max()+1.0)],
-            ticks="outside", showgrid=True, gridcolor="lightgray",
-            zeroline=True, zerolinewidth=2, zerolinecolor="black",
-            )
+        range=[0, float(y.max() + 1.0)],
+        ticks="outside",
+        showgrid=True,
+        gridcolor="lightgray",
+        zeroline=True,
+        zerolinewidth=2,
+        zerolinecolor="black",
+    )
     st.plotly_chart(fig, width="stretch")
 
     # Results

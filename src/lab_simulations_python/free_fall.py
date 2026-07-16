@@ -1,7 +1,9 @@
-import numpy as np
 from typing import Dict
 
-def calculate_free_fall(initial_position: float, initial_velocity: float, time: float=0.0) -> Dict[str, float]:
+
+def calculate_free_fall(
+    initial_position: float, initial_velocity: float, time: float = 0.0
+) -> Dict[str, float]:
     """
     Calculates the kinematic values for free fall
 
@@ -16,10 +18,10 @@ def calculate_free_fall(initial_position: float, initial_velocity: float, time: 
 
     g = 9.81
 
-    final_position = initial_position + (initial_velocity * time ) - (0.5 * g * time**2)
+    final_position = initial_position + (initial_velocity * time) - (0.5 * g * time**2)
     final_velocity = initial_velocity - (g * time)
 
     return {
-            "final_position": final_position,
-            "final_velocity": final_velocity,
-            }
+        "final_position": final_position,
+        "final_velocity": final_velocity,
+    }

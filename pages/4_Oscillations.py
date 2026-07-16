@@ -1,8 +1,9 @@
-import streamlit as st
 import numpy as np
 import plotly.graph_objects as go
+import streamlit as st
+
+from src.lab_simulations_python.i18n import language_selector, t
 from src.lab_simulations_python.oscillations import calculate_oscillation, displacement
-from src.lab_simulations_python.i18n import t, language_selector
 
 st.set_page_config(layout="wide")
 
@@ -26,34 +27,36 @@ if st.button(t("run_simulation")):
 
     t_arr = np.linspace(0, 6 * props["period"], num=1000)
     x = displacement(t_arr, mass, spring_constant, amplitude, damping)
-    
+
     # Plotting
     st.subheader(t("osc_displacement_vs_time"))
 
-    fig = go.Figure(
-            go.Scatter(
-                x=t_arr,
-                y=x,
-                mode="lines",
-                hovertemplate=t("osc_hover"))
-            )
+    fig = go.Figure(go.Scatter(x=t_arr, y=x, mode="lines", hovertemplate=t("osc_hover")))
 
     fig.update_layout(
-            title=t("osc_plot_title"),
-            xaxis_title=t("time_s"),
-            yaxis_title=t("osc_displacement_axis"),
-            plot_bgcolor="white",
-            )
+        title=t("osc_plot_title"),
+        xaxis_title=t("time_s"),
+        yaxis_title=t("osc_displacement_axis"),
+        plot_bgcolor="white",
+    )
 
     fig.update_xaxes(
-            range=[0, float(t_arr.max()+1.0)],
-            ticks="outside", showgrid=True, gridcolor="lightgray",
-            zeroline=True, zerolinewidth=2, zerolinecolor="black",
-            )
+        range=[0, float(t_arr.max() + 1.0)],
+        ticks="outside",
+        showgrid=True,
+        gridcolor="lightgray",
+        zeroline=True,
+        zerolinewidth=2,
+        zerolinecolor="black",
+    )
     fig.update_yaxes(
-            ticks="outside", showgrid=True, gridcolor="lightgray",
-            zeroline=True, zerolinewidth=2, zerolinecolor="black",
-           )
+        ticks="outside",
+        showgrid=True,
+        gridcolor="lightgray",
+        zeroline=True,
+        zerolinewidth=2,
+        zerolinecolor="black",
+    )
     st.plotly_chart(fig, width="stretch")
 
     # Results

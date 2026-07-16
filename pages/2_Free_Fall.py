@@ -1,8 +1,9 @@
-import streamlit as st
 import numpy as np
 import plotly.graph_objects as go
+import streamlit as st
+
 from src.lab_simulations_python.free_fall import calculate_free_fall
-from src.lab_simulations_python.i18n import t, language_selector
+from src.lab_simulations_python.i18n import language_selector, t
 
 st.set_page_config(layout="wide")
 
@@ -24,7 +25,6 @@ if st.button(t("run_simulation")):
     # Calculations
     kinematics = calculate_free_fall(position_input, velocity_input, time_input)
 
-
     # Plotting
     st.subheader(t("plots"))
 
@@ -34,50 +34,58 @@ if st.button(t("run_simulation")):
     v = velocity_input - (g * t_arr)
 
     # Position vs Time
-    fig_x = go.Figure(
-            go.Scatter(
-                x=t_arr,
-                y=x,
-                mode="lines",
-                hovertemplate=t("ff_hover_position"))
-            )
+    fig_x = go.Figure(go.Scatter(x=t_arr, y=x, mode="lines", hovertemplate=t("ff_hover_position")))
 
     fig_x.update_layout(
-            title=t("ff_pos_vs_time"),
-            xaxis_title=t("time_s"),
-            yaxis_title=t("ff_position_axis"),
-            plot_bgcolor="white",
-            )
+        title=t("ff_pos_vs_time"),
+        xaxis_title=t("time_s"),
+        yaxis_title=t("ff_position_axis"),
+        plot_bgcolor="white",
+    )
 
     fig_x.update_xaxes(
-            ticks="outside", showgrid=True, gridcolor="lightgray",
-            zeroline=True, zerolinewidth=2, zerolinecolor="black")
+        ticks="outside",
+        showgrid=True,
+        gridcolor="lightgray",
+        zeroline=True,
+        zerolinewidth=2,
+        zerolinecolor="black",
+    )
     fig_x.update_yaxes(
-            ticks="outside", showgrid=True, gridcolor="lightgray",
-            zeroline=True, zerolinewidth=2, zerolinecolor="black")
+        ticks="outside",
+        showgrid=True,
+        gridcolor="lightgray",
+        zeroline=True,
+        zerolinewidth=2,
+        zerolinecolor="black",
+    )
 
-     # Velocity vs Time
-    fig_v = go.Figure(
-            go.Scatter(
-                x=t_arr,
-                y=v,
-                mode="lines",
-                hovertemplate=t("ff_hover_velocity"))
-            )
+    # Velocity vs Time
+    fig_v = go.Figure(go.Scatter(x=t_arr, y=v, mode="lines", hovertemplate=t("ff_hover_velocity")))
 
     fig_v.update_layout(
-            title=t("ff_vel_vs_time"),
-            xaxis_title=t("time_s"),
-            yaxis_title=t("ff_velocity_axis"),
-            plot_bgcolor="white",
-            )
+        title=t("ff_vel_vs_time"),
+        xaxis_title=t("time_s"),
+        yaxis_title=t("ff_velocity_axis"),
+        plot_bgcolor="white",
+    )
 
     fig_v.update_xaxes(
-            ticks="outside", showgrid=True, gridcolor="lightgray",
-            zeroline=True, zerolinewidth=2, zerolinecolor="black")
+        ticks="outside",
+        showgrid=True,
+        gridcolor="lightgray",
+        zeroline=True,
+        zerolinewidth=2,
+        zerolinecolor="black",
+    )
     fig_v.update_yaxes(
-            ticks="outside", showgrid=True, gridcolor="lightgray",
-            zeroline=True, zerolinewidth=2, zerolinecolor="black")
+        ticks="outside",
+        showgrid=True,
+        gridcolor="lightgray",
+        zeroline=True,
+        zerolinewidth=2,
+        zerolinecolor="black",
+    )
 
     # Render both plots side by side
     c1, c2 = st.columns(2)

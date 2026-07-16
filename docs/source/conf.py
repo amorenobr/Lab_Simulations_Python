@@ -8,28 +8,23 @@
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path('../..', 'src/lab_simulations_python').resolve()))
+sys.path.insert(0, str(Path("../..", "src/lab_simulations_python").resolve()))
 
-project = 'Lab Simulations'
-copyright = '2026, Alexander Moreno Briceño'
-author = 'Alexander Moreno Briceño'
+project = "Lab Simulations"
+copyright = "2026, Alexander Moreno Briceño"
+author = "Alexander Moreno Briceño"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = [
-        'sphinx.ext.autodoc',
-        'sphinx.ext.napoleon',
-        'sphinx.ext.viewcode'
-        ]
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.napoleon", "sphinx.ext.viewcode"]
 
-templates_path = ['_templates']
+templates_path = ["_templates"]
 exclude_patterns = []
-
 
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
-html_static_path = ['_static']
+html_theme = "alabaster"
+html_static_path = ["_static"]

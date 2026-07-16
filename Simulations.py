@@ -1,7 +1,12 @@
 import streamlit as st
-from src.lab_simulations_python.i18n import t, language_selector
 
-st.set_page_config(page_title="Physics Lab Simulations", page_icon="assets/LogoUAN.png", layout="wide",)
+from src.lab_simulations_python.i18n import language_selector, t
+
+st.set_page_config(
+    page_title="Physics Lab Simulations",
+    page_icon="assets/LogoUAN.png",
+    layout="wide",
+)
 
 language_selector()
 
