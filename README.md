@@ -61,6 +61,20 @@ cd docs && pixi run make html
 
 The HTML output is written to `docs/build/html`.
 
+Lint and format the code:
+
+```bash
+pixi run ruff check .
+pixi run ruff format .
+```
+
+Ruff runs automatically on every commit via pre-commit.
+After cloning, enable the hook once:
+
+```bash
+pixi run pre-commit install
+```
+
 ## Project Structure
 
 ```
@@ -81,6 +95,7 @@ Lab_Simulations_Python/
 - [Plotly](https://plotly.com/python/) — interactive plots
 - [Sphinx](https://www.sphinx-doc.org) — documentation
 - [Pixi](https://pixi.sh) — environment management
+- [Ruff](https://docs.astral.sh/ruff/) — linting and formatting
 
 ## License
 
