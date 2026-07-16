@@ -16,7 +16,7 @@ one-click language toggle.
 Set the initial position, velocity, acceleration, and time to watch position and 
 velocity evolve and read off the final values.
 - **Free Fall** - A particle moving along a vertical straight line with gravity acceleration. 
-Set the inital height, velocity, and time to watch the height and velocity evolve with final 
+Set the initial height, velocity, and time to watch the height and velocity evolve with final 
 values.
 - **Projectile Motion** - Launch a projectile at a chosen speed and angle and 
 visualize its trajectory. Computes time of flight, maximum height, and horizontal 

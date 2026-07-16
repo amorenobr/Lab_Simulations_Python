@@ -23,6 +23,9 @@ TRANSLATIONS = {
             - **Linear Motion** - Model a particle moving in a straight line with constant acceleration. 
             Set the initial position, initial velocity, acceleration, and time to observe the position 
             and velocity evolve over time and read off the final position and velocity.
+            - **Free Fall** - Model a particle moving along a vertical straight line with gravity acceleration. 
+            Set the initial height, velocity, and time to watch the height and velocity evolve with final 
+            values.
             - **Projectile Motion** - Launch a projectile with a chosen speed and angle, then visualize 
             its trajectory. The simulation computes and displays the time of flight, maximum height, 
             and horizontal range using the kinematic equations.
@@ -190,6 +193,9 @@ TRANSLATIONS = {
             - **Movimiento rectilíneo** - Modela una partícula que se mueve en línea recta con aceleración 
             constante. Define la posición inicial, la velocidad inicial, la aceleración y el tiempo para 
             observar cómo evoluciona la posición y la velocidad, y leer la posición y la velocidad finales.
+            - **Caída Libre** - Modela una particula que se mueve verticalmente debido a la gravedad. 
+            Define la altura inicial, la velocidad, y el tiempo para observar cómo evolucionan los valores 
+            de altura y velocidad.
             - **Movimiento de proyectil** - Lanza un proyectil con una rapidez y un ángulo elegidos y visualiza 
             su trayectoria. La simulación calcula el tiempo de vuelo, la altura máxima y el alcance horizontal 
             usando las ecuaciones cinemáticas.
