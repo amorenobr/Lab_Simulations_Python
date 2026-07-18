@@ -14,6 +14,7 @@ TRANSLATIONS = {
         "nav_linear": "Linear Motion",
         "nav_fall": "Free Fall",
         "nav_projectile": "Projectile Motion",
+        "nav_circular": "Circular Motion",
         "nav_oscillator": "Damped Oscillator",
         "landing_body": """
             This is an interactive collection of physics lab simulations designed to explore key concepts
@@ -30,6 +31,9 @@ TRANSLATIONS = {
             - **Projectile Motion** - Launch a projectile with a chosen speed and angle, then visualize
             its trajectory. The simulation computes and displays the time of flight, maximum height,
             and horizontal range using the kinematic equations.
+            - **Circular Motion** - Model a particle in uniform circular motion at constant angular velocity.
+            See the circular path, the x(t) and y(t) components, and the linear speed, period, frequency,
+            and centripetal acceleration.
             - **Damped Harmonic Oscillator** - Explore the motion of a mass on a spring. Adjust the mass,
             stiffness, and damping coefficient to observe undamped, underdamped, critically damped,
             and overdamped motion.
@@ -129,6 +133,35 @@ TRANSLATIONS = {
         "pj_time_of_flight": "Time of Flight",
         "pj_max_height": "Maximum Height",
         "pj_horizontal_range": "Horizontal Range",
+        # --- circular motion ---
+        "circ_title": "Uniform Circular Motion Simulation",
+        "circ_intro": """
+            **Uniform Circular Motion** describes a particle moving around a circle of radius $r$ at a constant
+            angular velocity $\\omega$. Its angular position grows as $\\theta = \\omega t$, and its position
+            is $x = r\\cos(\\omega t)$, $y = r\\sin(\\omega t)$.
+
+            The key quantities are:
+            - **Linear speed:** $v = \\omega r$
+            - **Period:** $T = \\dfrac{2\\pi}{\\omega}$
+            - **Frequency:** $f = \\dfrac{\\omega}{2\\pi}$
+            - **Centripetal acceleration:** $a_c = \\omega^2 r = \\dfrac{v^2}{r}$
+
+            Use the sidebar to set the radius, angular velocity, and time, then click **Run Simulation**
+            to view the path and results.
+            """,
+        "circ_radius": "Radius (m)",
+        "circ_omega": "Angular Velocity (rad/s)",
+        "circ_current_params": "Current parameters: radius **{r} m**, ω **{w} rad/s** and **{tm} s**",
+        "circ_path_title": "Circular Path",
+        "circ_x_axis": "x (m)",
+        "circ_y_axis": "y (m)",
+        "circ_hover_pos": "x: %{x:.2f} m<br>y: %{y:.2f} m<extra></extra>",
+        "circ_components_title": "Position Components vs. Time",
+        "circ_pos_axis": "Position (m)",
+        "circ_speed": "Linear Speed",
+        "circ_period": "Period",
+        "circ_frequency": "Frequency",
+        "circ_centripetal": "Centripetal Acceleration",
         # --- Oscillations ---
         "osc_title": "Damped Harmonic Oscillator Simulation",
         "osc_intro": """
@@ -174,6 +207,7 @@ TRANSLATIONS = {
         "nav_linear": "Movimiento Rectilíneo",
         "nav_fall": "Caída Libre",
         "nav_projectile": "Movimiento de Proyectil",
+        "nav_circular": "Movimiento Circular",
         "nav_oscillator": "Oscilador Amortiguado",
         "landing_body": """
             Esta es una colección interactiva de simulaciones de laboratorio de física diseñada para explorar
@@ -190,6 +224,9 @@ TRANSLATIONS = {
             - **Movimiento de proyectil** - Lanza un proyectil con una rapidez y un ángulo elegidos y visualiza
             su trayectoria. La simulación calcula el tiempo de vuelo, la altura máxima y el alcance horizontal
             usando las ecuaciones cinemáticas.
+            - **Movimiento Circular** - Modela una partícula en movimiento circular uniforme con velocidad angular
+            constante. Observa la trayectoria circular, las componentes x(t) y y(t), y la rapidez lineal, el periodo,
+            la frecuencia y la aceleración centrípeta.
             - **Oscilador armónico amortiguado** - Explora el movimiento de una masa en un resorte. Ajusta la
             masa, la rigidez y el coeficiente de amortiguamiento para observar movimiento no amortiguado,
             subamortiguado, con amortiguamiento crítico y sobreamortiguado.
@@ -288,6 +325,35 @@ TRANSLATIONS = {
         "pj_time_of_flight": "Tiempo de vuelo",
         "pj_max_height": "Altura máxima",
         "pj_horizontal_range": "Alcance horizontal",
+        # --- circular motion ---
+        "circ_title": "Simulación de movimiento circular uniforme",
+        "circ_intro": """
+            El **movimiento circular uniforme** describe una partícula que se mueve alrededor de un círculo de radio $r$ con
+            velocidad angular constante $\\omega$. Su posición angular crece como $\\theta = \\omega t$, y su posición es
+            $x = r\\cos(\\omega t)$, $y = r\\sin(\\omega t)$.
+
+            Las cantidades clave son:
+            - **Rapidez lineal:** $v = \\omega r$
+            - **Periodo:** $T = \\dfrac{2\\pi}{\\omega}$
+            - **Frecuencia:** $f = \\dfrac{\\omega}{2\\pi}$
+            - **Aceleración centrípeta:** $a_c = \\omega^2 r = \\dfrac{v^2}{r}$
+
+            Usa la barra lateral para definir el radio, la velocidad angular y el tiempo; luego haz clic en **Ejecutar
+            Simulación** para ver la trayectoria y los resultados.
+            """,
+        "circ_radius": "Radio (m)",
+        "circ_omega": "Velocidad angular (rad/s)",
+        "circ_current_params": "Parámetros actuales: radio **{r} m**, ω **{w} rad/s** y **{tm} s**",
+        "circ_path_title": "Trayectoria circular",
+        "circ_x_axis": "x (m)",
+        "circ_y_axis": "y (m)",
+        "circ_hover_pos": "x: %{x:.2f} m<br>y: %{y:.2f} m<extra></extra>",
+        "circ_components_title": "Componentes de posición vs. Tiempo",
+        "circ_pos_axis": "Posición (m)",
+        "circ_speed": "Rapidez lineal",
+        "circ_period": "Periodo",
+        "circ_frequency": "Frecuencia",
+        "circ_centripetal": "Aceleración centrípeta",
         # --- Oscillations ---
         "osc_title": "Simulación de Oscilador Armónico Amortiguado",
         "osc_intro": """
@@ -365,4 +431,7 @@ def language_selector() -> None:
     st.sidebar.page_link("pages/1_Linear_Motion.py", label=t("nav_linear"), icon="➡️")
     st.sidebar.page_link("pages/2_Free_Fall.py", label=t("nav_fall"), icon="⬇️")
     st.sidebar.page_link("pages/3_Projectile_Motion.py", label=t("nav_projectile"), icon="🎯")
-    st.sidebar.page_link("pages/4_Oscillations.py", label=t("nav_oscillator"), icon="🌊")
+    st.sidebar.page_link(
+        "pages/4_Circular_Motion.py", label=t("nav_circular"), icon=":material/refresh:"
+    )
+    st.sidebar.page_link("pages/5_Oscillations.py", label=t("nav_oscillator"), icon="🌊")

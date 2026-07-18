@@ -21,6 +21,8 @@ values.
 - **Projectile Motion** - Launch a projectile at a chosen speed and angle and 
 visualize its trajectory. Computes time of flight, maximum height, and horizontal 
 range from the kinematic equations.
+- **Circular Motion** - A particle in uniform circular motion. Shows the circular path, the
+x/t)/y(t) components, and the linear speed, period, frequency, and centripetal acceleration.
 - **Damped Harmonic Oscillator** - A mass on a spring. Vary the mass, stiffness, 
 and damping to move between undamped, underdamped, critically damped, and overdamped 
 motion.

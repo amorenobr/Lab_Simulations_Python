@@ -25,6 +25,14 @@ Projectile Motion
       :undoc-members:
       :show-inheritance:
 
+Circular Motion
+---------------
+
+.. automodule:: circular_motion
+      :members:
+      :undoc-members:
+      :show-inheritance:
+
 Damped Harmonic Oscillator
 --------------------------
 

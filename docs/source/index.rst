@@ -41,6 +41,16 @@ the app plots the trajectory and reports the time of flight, maximum height, and
 calculations are implemented in the :mod:`projectile` module.
 
 
+Circular Motion
+~~~~~~~~~~~~~~~
+
+Models a particle in uniform circular motion around a circle of radius :math:`r` at constant angular velocity :math:`\omega`. 
+Its position is :math:`x = r\cos(\omega t)`, :math:`y = r\sin(\omega t)`, giving linear speed :math:`v = \omega r`, period 
+:math:`T = 2\pi/\omega`, frequency :math:`f = \omega/(2\pi)`, and centripetal acceleration :math:`a_c = \omega^2 r`. The 
+app draws the circular path with the particle's current position and plots the x(t) and y(t) components over time. The 
+underlying calculations are implemented in the :mod:`circular_motion` module.
+
+
 Damped Harmonic Oscillator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
