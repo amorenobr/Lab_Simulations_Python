@@ -16,6 +16,7 @@ TRANSLATIONS = {
         "nav_projectile": "Projectile Motion",
         "nav_circular": "Circular Motion",
         "nav_oscillator": "Damped Oscillator",
+        "nav_newton": "Newton's Laws",
         "landing_body": """
             This is an interactive collection of physics lab simulations designed to explore key concepts
             in classical mechanics. Each simulation allows you to adjust different physical parameters
@@ -198,6 +199,36 @@ TRANSLATIONS = {
         "regime_underdamped": "underdamped",
         "regime_critically damped": "critically damped",
         "regime_overdamped": "overdamped",
+        # --- Newton's Laws ---
+        "nl_title": "Newton's Second Law Simulation",
+        "nl_intro": """
+        **Newton's Second Law** relates the net force on an object to its acceleration: $F_{net} = m a$. Here a block of
+        mass $m$ on a flat surface is pushed by an applied force $F$, opposed by kinetic friction $f = \\mu m g$
+        (with $g = 9.81\\ \\mathrm{m/s^2}$).
+
+        Starting from rest, the block obeys:
+
+        - **Friction force:** $f = \\mu m g$
+        - **Net force:** $F_{net} = F - f$ (zero if $F \\le f$, so the block stays at rest)
+        - **Acceleration:** $a = \\dfrac{F_{net}}{m}$
+
+        Use the sidebar to set the mass, applied force, friction coefficient, and time, then click **Run Simulation**
+        to view the motion and results.
+        """,
+        "nl_mass": "Mass (kg)",
+        "nl_force": "Applied Force (N)",
+        "nl_friction": "Friction Coefficient μ",
+        "nl_current_params": "Current parameters: mass **{m} kg**, force **{f} N**, μ **{mu}** and **{tm} s**",
+        "nl_vel_vs_time": "Velocity vs. Time",
+        "nl_pos_vs_time": "Position vs. Time",
+        "nl_velocity_axis": "Velocity (m/s)",
+        "nl_position_axis": "Position (m)",
+        "nl_hover_velocity": "Time: %{x:.2f}, s<br>Velocity: %{y:.2f} m/s<extra></extra",
+        "nl_hover_position": "Time: %{x:.2f}, s<br>Position: %{y:.2f} m<extra></extra>",
+        "nl_friction_force": "Friction Force",
+        "nl_net_force": "Net Force",
+        "nl_acceleration": "Acceleration",
+        "nl_final_velocity": "Final Velocity",
         "developed_by": "Developed by **Alexander Moreno Briceño** - Universidad Antonio Nariño",
     },
     "es": {
@@ -209,6 +240,7 @@ TRANSLATIONS = {
         "nav_projectile": "Movimiento de Proyectil",
         "nav_circular": "Movimiento Circular",
         "nav_oscillator": "Oscilador Amortiguado",
+        "nav_newton": "Leyes de Newton",
         "landing_body": """
             Esta es una colección interactiva de simulaciones de laboratorio de física diseñada para explorar
             conceptos clave de la mecánica clásica. Cada simulación te permite ajustar diferentes parámetros
@@ -390,6 +422,36 @@ TRANSLATIONS = {
         "regime_underdamped": "subamortiguado",
         "regime_critically damped": "con amortiguamiento crítico",
         "regime_overdamped": "sobreamortiguado",
+        # --- Newton's Laws ---
+        "nl_title": "Simulación de la Segunda Ley de Newton",
+        "nl_intro": """
+        La **segunda ley de Newton** relaciona la fuerza neta sobre un objeto con su aceleración: $F_{neta} = m a$. Aquí
+        un bloque de masa $m$ sobre una superficie plana es empujado por una fuerza aplicada $F$, opuesta por la fricción
+        cinética $f = \\mu m g$ (con $g = 9.81\\ \\mathrm{m/s^2}$).
+
+        Partiendo del reposo, el bloque cumple:
+
+        - **Fuerza de fricción:** $f = \\mu m g$
+        - **Fuerza neta:** $F_{neta} = F - f$ (cero si $F \\le f$, por lo que el bloque permanece en reposo)
+        - **Aceleración:** $a = \\dfrac{F_{neta}}{m}$
+
+        Usa la barra lateral para definir la masa, la fuerza aplicada, el coeficiente de fricción y el tiempo; luego haz
+        click en **Ejecutar Simulación** para ver el movimiento y los resultados.
+        """,
+        "nl_mass": "Masa (kg)",
+        "nl_force": "Fuerza aplicada (N)",
+        "nl_friction": "Coeficiente de fricción μ",
+        "nl_current_params": "Parámetros actuales: masa **{m} kg**, fuerza **{f} N**, μ **{mu}** y **{tm} s**",
+        "nl_vel_vs_time": "Velocidad vs. Tiempo",
+        "nl_pos_vs_time": "Posición vs. Tiempo",
+        "nl_velocity_axis": "Velocidad (m/s)",
+        "nl_position_axis": "Posición (m)",
+        "nl_hover_velocity": "Tiempo: %{x:.2f}, s<br>Velocidad: %{y:.2f} m/s<extra></extra",
+        "nl_hover_position": "Tiempo: %{x:.2f}, s<br>Posición: %{y:.2f} m<extra></extra>",
+        "nl_friction_force": "Fuerza de fricción",
+        "nl_net_force": "Fuerza neta",
+        "nl_acceleration": "Aceleración",
+        "nl_final_velocity": "Velocidad final",
         "developed_by": "Desarrollado por **Alexander Moreno Briceño** - Universidad Antonio Nariño",
     },
 }
@@ -435,3 +497,6 @@ def language_selector() -> None:
         "pages/4_Circular_Motion.py", label=t("nav_circular"), icon=":material/refresh:"
     )
     st.sidebar.page_link("pages/5_Oscillations.py", label=t("nav_oscillator"), icon="🌊")
+    st.sidebar.page_link(
+        "pages/6_Newtons_Laws.py", label=t("nav_newton"), icon=":material/fitness_center:"
+    )
