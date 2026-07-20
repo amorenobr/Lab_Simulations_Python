@@ -60,6 +60,15 @@ underdamped, critically damped, and overdamped), determined by the damping ratio
 plots displacement over time and reports the natural period, natural frequency, and damping ratio. The underlying calculations are implemented in the :mod:`oscillations` module.
 
 
+Newton's Laws
+~~~~~~~~~~~~~
+
+Models a block of mass :math:`m` pushed from rest along a flat surface by an applied force :math:`F`, opposed by kinetic friction
+:math:`f = \mu m g`. By Newton's second law the net force is :math:`F_{net} = F - f` (zero if the force cannot overcome friction),
+giving acceleration :math:`a = F_{net}/m`. The app plots velocity and position over time and reports the friction force,
+net force, acceleration, and final velocity. The underlying calculations are implemented in the :mod:`newtons_laws` module.
+
+
 API Reference
 ~~~~~~~~~~~~~
 

@@ -26,6 +26,8 @@ x/t)/y(t) components, and the linear speed, period, frequency, and centripetal a
 - **Damped Harmonic Oscillator** - A mass on a spring. Vary the mass, stiffness, 
 and damping to move between undamped, underdamped, critically damped, and overdamped 
 motion.
+- **Newton's Laws** - Push a block against kinetic friction and see F = ma in action: net force,
+acceleration, and the resulting velocity and position over time.
 
 ## Getting Started
 

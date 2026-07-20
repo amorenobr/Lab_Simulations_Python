@@ -40,3 +40,11 @@ Damped Harmonic Oscillator
       :members:
       :undoc-members:
       :show-inheritance:
+
+Newton's Laws
+-------------
+
+.. automodule:: newtons_laws
+      :members:
+      :undoc-members:
+      :show-inheritance:

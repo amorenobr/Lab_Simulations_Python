@@ -38,6 +38,8 @@ TRANSLATIONS = {
             - **Damped Harmonic Oscillator** - Explore the motion of a mass on a spring. Adjust the mass,
             stiffness, and damping coefficient to observe undamped, underdamped, critically damped,
             and overdamped motion.
+            - **Newton's Laws** - Push a block with an applied force against kinetic friction and see Newton's
+            second law in action: net force, acceleration, and the resulting velocity and position over time.
 
             ### How to Use
             1. Select a simulation from the **Sidebar** on the left
@@ -262,6 +264,9 @@ TRANSLATIONS = {
             - **Oscilador armónico amortiguado** - Explora el movimiento de una masa en un resorte. Ajusta la
             masa, la rigidez y el coeficiente de amortiguamiento para observar movimiento no amortiguado,
             subamortiguado, con amortiguamiento crítico y sobreamortiguado.
+            - **Leyes de Newton** - Empuja un bloque con una fuerza aplicada contra la fricción cinética y observa
+            la segunda ley de Newton en acción: fuerza neta, aceleración, y la velocidad y posición resultantes
+            en el tiempo.
 
             ### Cómo usar la app
             1. Selecciona una simulación en la **barra lateral** de la izquierda
