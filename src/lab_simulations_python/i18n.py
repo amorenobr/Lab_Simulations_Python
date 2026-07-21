@@ -17,6 +17,7 @@ TRANSLATIONS = {
         "nav_circular": "Circular Motion",
         "nav_oscillator": "Damped Oscillator",
         "nav_newton": "Newton's Laws",
+        "nav_energy": "Work and Energy",
         "landing_body": """
             This is an interactive collection of physics lab simulations designed to explore key concepts
             in classical mechanics. Each simulation allows you to adjust different physical parameters
@@ -231,6 +232,29 @@ TRANSLATIONS = {
         "nl_net_force": "Net Force",
         "nl_acceleration": "Acceleration",
         "nl_final_velocity": "Final Velocity",
+        # --- Work and Energy ---
+        "we_title": "Work and Energy Simulation",
+        "we_intro": """
+        **Work and Energy** - as an object moves under gravity, its **kinetic energy** $KE = \\tfrac{1}{2} m v^2$ and
+        **gravitational potential energy** $PE = m g h$ continually convert into each other, while the **total
+        mechanical energy** $E = KE + PE$ stays constant (energy is conserved).
+
+        Gravity does work on the object: as it falls, $PE$ decreases and $KE$ increases by the same amount, so the
+        total line stays flat.
+
+        Use the sidebar to set the mass, initial height, initial_velocity, and time, then click **Run Simulation**
+        to watch the energy convert while the total is conserved.
+        """,
+        "we_mass": "Mass (kg)",
+        "we_height": "initial Height (m)",
+        "we_velocity": "Initial Velocity (m/s)",
+        "we_current_params": "Current parameters: mass **{m} kg**, height **{h} m**, velocity **{v} m/s** and **{tm} s**",
+        "we_energy_vs_time": "Energy vs. Time",
+        "we_energy_axis": "Energy (J)",
+        "we_ke": "Kinetic Energy",
+        "we_pe": "Potential Energy",
+        "we_total": "Total Energy",
+        "we_hover": "Time: %{x:.2f} s<br>Energy: %{y:.2f} J<extra></extra>",
         "developed_by": "Developed by **Alexander Moreno Briceño** - Universidad Antonio Nariño",
     },
     "es": {
@@ -243,6 +267,7 @@ TRANSLATIONS = {
         "nav_circular": "Movimiento Circular",
         "nav_oscillator": "Oscilador Amortiguado",
         "nav_newton": "Leyes de Newton",
+        "nav_energy": "Trabajo y Energía",
         "landing_body": """
             Esta es una colección interactiva de simulaciones de laboratorio de física diseñada para explorar
             conceptos clave de la mecánica clásica. Cada simulación te permite ajustar diferentes parámetros
@@ -457,6 +482,29 @@ TRANSLATIONS = {
         "nl_net_force": "Fuerza neta",
         "nl_acceleration": "Aceleración",
         "nl_final_velocity": "Velocidad final",
+        # --- Work and Energy ---
+        "we_title": "Simulación de Trabajo y Energía",
+        "we_intro": """
+        **Trabajo y Energía** - a medida que un objeto se mueve bajo la acción de la gravedad, su **energía cinética**
+        $KE = \\tfrac{1}{2} m v^2$ y su **energía potencial gravitatoria** $PE = m g h$ se convierten continuamente
+        entre sí, mientras que la **energía mecánica total** $E = KE + PE$ permanece constante (la energía se conserva).
+
+        La gravedad realiza trabajo sobre el objeto: al caer, $PE$ disminuye y $KE$ aumenta en la misma cantidad, y
+        la energía total permanece constante.
+
+        Usa la barra lateral para definir la masa, la altura inicial,la velocidad inicial y el tiempo; luego haz
+        click en **Ejecutar Simulación** para ver cómo se convierte la energía mientras el total se conserva.
+        """,
+        "we_mass": "Masa (kg)",
+        "we_height": "Altura Inicial (m)",
+        "we_velocity": "Velocidad Inicial (m/s)",
+        "we_current_params": "Parámetros actuales: masa **{m} kg**, altura **{h} m**, velocidad **{v} m/s** y **{tm} s**",
+        "we_energy_vs_time": "Energía vs. Tiempo",
+        "we_energy_axis": "Energía (J)",
+        "we_ke": "Energía cinética",
+        "we_pe": "Energía potencial",
+        "we_total": "Energía Total",
+        "we_hover": "Tiempo: %{x:.2f} s<br>Energía: %{y:.2f} J<extra></extra>",
         "developed_by": "Desarrollado por **Alexander Moreno Briceño** - Universidad Antonio Nariño",
     },
 }
@@ -505,3 +553,4 @@ def language_selector() -> None:
     st.sidebar.page_link(
         "pages/6_Newtons_Laws.py", label=t("nav_newton"), icon=":material/fitness_center:"
     )
+    st.sidebar.page_link("pages/7_Work_Energy.py", label=t("nav_energy"), icon=":material/bolt:")
