@@ -90,7 +90,6 @@ Lab_Simulations_Python/
 ├── Simulations.py                  # Streamlit landing page
 ├── pages/                          # One file per simulation
 ├── src/lab_simulations_python/     # Physics engines + i18n (importable package)
-├── assets/                         # Logo and static assets
 ├── tests/                          # Pytest suite
 ├── docs/                           # Sphinx documentation
 └── index.html                      # stlite (WebAssembly) build for GitHub Pages
@@ -108,9 +107,6 @@ Lab_Simulations_Python/
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-The Universidad Antonio Nariño logo (`assets/LogoUAN.png`) is a trademark of Universidad Antonio Nariño 
-and is **not** covered by the MIT License. All rights to the logo remain with its owner.
 
 ## Author
 

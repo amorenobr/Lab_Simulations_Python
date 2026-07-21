@@ -34,7 +34,7 @@ jobs:
         run: |
           mkdir -p public/docs
           cp index.html Simulations.py public/
-          cp -r pages src assets .streamlit public/
+          cp -r pages src .streamlit public/
           cp -r docs/build/html/* public/docs/
 
       - uses: actions/upload-pages-artifact@v3

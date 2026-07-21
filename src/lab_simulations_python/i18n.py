@@ -1,8 +1,4 @@
-from pathlib import Path
-
 import streamlit as st
-
-_LOGO = Path(__file__).resolve().parents[2] / "assets" / "LogoUAN.png"
 
 LANGUAGES = {"English": "en", "Español": "es"}
 
@@ -601,8 +597,6 @@ def language_selector() -> None:
                 </style>""",
         unsafe_allow_html=True,
     )
-    if _LOGO.exists():
-        st.sidebar.image(str(_LOGO), width=600)
     choice = st.sidebar.radio(
         "🌐 Language / Idioma",
         list(LANGUAGES.keys()),
