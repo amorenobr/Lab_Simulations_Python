@@ -69,6 +69,15 @@ giving acceleration :math:`a = F_{net}/m`. The app plots velocity and position o
 net force, acceleration, and final velocity. The underlying calculations are implemented in the :mod:`newtons_laws` module.
 
 
+Work and Energy
+~~~~~~~~~~~~~~~
+
+Tracks the mechanical energy of an object moving vertically under gravity. Its kinetic energy :math:`KE = \tfrac{1}{2} m v^2`
+and gravitational potential energy :math:`PE = m g h` convert into each other while the total :math:`E = KE + PE` stays
+constant. The app plots kinetic, potential, and total energy over time. The flat total line illustrating conservation
+of energy. The underlying calculations are implemented in the :mod:`work_energy` module.
+
+
 API Reference
 ~~~~~~~~~~~~~
 

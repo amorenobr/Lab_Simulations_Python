@@ -41,6 +41,8 @@ TRANSLATIONS = {
             and overdamped motion.
             - **Newton's Laws** - Push a block with an applied force against kinetic friction and see Newton's
             second law in action: net force, acceleration, and the resulting velocity and position over time.
+            - **Work and Energy** - Watch a falling object convert potential into kinetic energy while the total
+            mechanical energy stays constant - energy conservation in action.
 
             ### How to Use
             1. Select a simulation from the **Sidebar** on the left
@@ -292,6 +294,8 @@ TRANSLATIONS = {
             - **Leyes de Newton** - Empuja un bloque con una fuerza aplicada contra la fricción cinética y observa
             la segunda ley de Newton en acción: fuerza neta, aceleración, y la velocidad y posición resultantes
             en el tiempo.
+            - **Trabajo y Energía** - Observa cómo un objeto que cae convierte la energía potencial en energía
+            cinética mientras la energía mecánica total permanece constante - la conservación de la energía en acción.
 
             ### Cómo usar la app
             1. Selecciona una simulación en la **barra lateral** de la izquierda

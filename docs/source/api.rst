@@ -48,3 +48,11 @@ Newton's Laws
       :members:
       :undoc-members:
       :show-inheritance:
+
+Work and Energy
+---------------
+
+.. automodule:: work_energy
+      :members:
+      :undoc-members:
+      :show-inheritance:

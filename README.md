@@ -28,6 +28,8 @@ and damping to move between undamped, underdamped, critically damped, and overda
 motion.
 - **Newton's Laws** - Push a block against kinetic friction and see F = ma in action: net force,
 acceleration, and the resulting velocity and position over time.
+- **Work and Energy** - A falling object converting potential energy to kinetic energy, with the
+total mechanical energy conserved.
 
 ## Getting Started
 
