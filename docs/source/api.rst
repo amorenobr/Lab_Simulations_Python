@@ -56,3 +56,11 @@ Work and Energy
       :members:
       :undoc-members:
       :show-inheritance:
+
+Momentum
+--------
+
+.. automodule:: momentum
+      :members:
+      :undoc-members:
+      :show-inheritance:

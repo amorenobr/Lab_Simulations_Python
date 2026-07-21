@@ -78,6 +78,16 @@ constant. The app plots kinetic, potential, and total energy over time. The flat
 of energy. The underlying calculations are implemented in the :mod:`work_energy` module.
 
 
+Momentum
+~~~~~~~~
+
+Models a one dimensional collision between two objects. The total momentum :math:`p = m_1 u_1 + m_2 u_2` is always
+conserved; kinetic energy is conserved in an elastic collision and partly lost in a (perfectly) inelastic one, where
+the objects stick together. The app plots the positions of both objects over time and reports the final velocities,
+the conserved momentum, and the kinetic energy lost. The underlying calculations are implemented in the
+:mod:`momentum` module.
+
+
 API Reference
 ~~~~~~~~~~~~~
 

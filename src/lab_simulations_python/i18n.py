@@ -44,6 +44,8 @@ TRANSLATIONS = {
             second law in action: net force, acceleration, and the resulting velocity and position over time.
             - **Work and Energy** - Watch a falling object convert potential into kinetic energy while the total
             mechanical energy stays constant - energy conservation in action.
+            - **Momentum** - Collide two objects in one dimension and see momentum conserved. Toggle between elastic
+            (objects bounce, energy conserved) and inelastic (objects stick, energy lost).
 
             ### How to Use
             1. Select a simulation from the **Sidebar** on the left
@@ -327,6 +329,9 @@ TRANSLATIONS = {
             en el tiempo.
             - **Trabajo y Energía** - Observa cómo un objeto que cae convierte la energía potencial en energía
             cinética mientras la energía mecánica total permanece constante - la conservación de la energía en acción.
+            -  **Momento Lineal** - Haz chocar dos objetos en una dimensión y observa la conservación del momento.
+            Alterna entre colisión elástica (los objetos rebotan, la energía se conserva) y colisión inelástica
+            (los objetos quedan unidos, se pierde energía).
 
             ### Cómo usar la app
             1. Selecciona una simulación en la **barra lateral** de la izquierda

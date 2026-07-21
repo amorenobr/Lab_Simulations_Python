@@ -30,6 +30,8 @@ motion.
 acceleration, and the resulting velocity and position over time.
 - **Work and Energy** - A falling object converting potential energy to kinetic energy, with the
 total mechanical energy conserved.
+- **Momentum** - A 1D collision of two objects with an elastic/inelastic toggle, showing conservation
+of momentum and the kinetic energy lost in inelastic collisions.
 
 ## Getting Started
 
