@@ -18,6 +18,7 @@ TRANSLATIONS = {
         "nav_oscillator": "Damped Oscillator",
         "nav_newton": "Newton's Laws",
         "nav_energy": "Work and Energy",
+        "nav_momentum": "Momentum",
         "landing_body": """
             This is an interactive collection of physics lab simulations designed to explore key concepts
             in classical mechanics. Each simulation allows you to adjust different physical parameters
@@ -257,6 +258,35 @@ TRANSLATIONS = {
         "we_pe": "Potential Energy",
         "we_total": "Total Energy",
         "we_hover": "Time: %{x:.2f} s<br>Energy: %{y:.2f} J<extra></extra>",
+        # --- Momentum ---
+        "mom_title": "Momentum and Collisions Simulation",
+        "mom_intro": """
+        **Momentum and Collisions** - in a one dimensional collision between two objects, the total momentum $p = m_1 u_1 + m_2 u_2$
+        is **always conserved**. What happens to kinetic energy depends on the collision type:
+
+        - **Elastic:** kinetic energy is also conserved; the objects bounce apart.
+        - **Inelastic:** the objects stick together and move with a common velocity; some kinetic energy is lost.
+
+        Set the masses, initial velocities, and collision type in the sidebar, then click **Run Simulation** to watch
+        the objects collide with momentum conserved.
+        """,
+        "mom_mass1": "Mass 1 (kg)",
+        "mom_velocity1": "Initial Velocity 1 (m/s)",
+        "mom_mass2": "Mass 2 (kg)",
+        "mom_velocity2": "Initial Velocity 2 (m/s)",
+        "mom_collision_type": "Collision Type",
+        "mom_elastic": "Elastic",
+        "mom_inelastic": "Inelastic",
+        "mom_current_params": "Current parameters: m1 **{m1} kg** at **{u1} m/s**, m2 **{m2} kg** at **{u2} m/s** - **{ctype}**",
+        "mom_pos_vs_time": "Position vs. Time",
+        "mom_position_axis": "Position (m)",
+        "mom_object1": "Object 1",
+        "mom_object2": "Object 2",
+        "mom_hover": "Time: %{x:.2f} s<br>Position: %{y:.2f} m<extra></extra>",
+        "mom_final_v1": "Final Velocity 1",
+        "mom_final_v2": "Final Velocity 2",
+        "mom_momentum": "Total Momentum",
+        "mom_ke_lost": "Kinetic Energy Lost",
         "developed_by": "Developed by **Alexander Moreno Briceño** - Universidad Antonio Nariño",
     },
     "es": {
@@ -270,6 +300,7 @@ TRANSLATIONS = {
         "nav_oscillator": "Oscilador Amortiguado",
         "nav_newton": "Leyes de Newton",
         "nav_energy": "Trabajo y Energía",
+        "nav_momentum": "Momento Lineal",
         "landing_body": """
             Esta es una colección interactiva de simulaciones de laboratorio de física diseñada para explorar
             conceptos clave de la mecánica clásica. Cada simulación te permite ajustar diferentes parámetros
@@ -509,6 +540,36 @@ TRANSLATIONS = {
         "we_pe": "Energía potencial",
         "we_total": "Energía Total",
         "we_hover": "Tiempo: %{x:.2f} s<br>Energía: %{y:.2f} J<extra></extra>",
+        # --- Momentum ---
+        "mom_title": "Simulación de Momento Lineal y Colisiones",
+        "mom_intro": """
+        **Momento lineal y colisiones** - en una colisión unidimensional entre dos objetos, el momento total $p = m_1 u_1 + m_2 u_2$
+        **siempre se conserva**. Lo que ocurre con la energía cinética depende del tipo de colisión:
+
+        - **Elástica:** la energía cinética también se conserva; los objetos rebotan.
+        - **Inelástica:** los objetos quedan unidos y se mueven con la misma velocidad; se pierde parte de la energía
+        cinética.
+
+        Define las masas, las velocidades iniciales y el tipo de colisión en la barra lateral; luego haz click en
+        **Ejecutar Simulación** para ver la colisión con el momento conservado.
+        """,
+        "mom_mass1": "Masa 1 (kg)",
+        "mom_velocity1": "Velocidad inicial 1 (m/s)",
+        "mom_mass2": "Masa 2 (kg)",
+        "mom_velocity2": "Velocidad inicial 2 (m/s)",
+        "mom_collision_type": "Tipo de colisión",
+        "mom_elastic": "Elástica",
+        "mom_inelastic": "Inelástica",
+        "mom_current_params": "Parámetros actuales: m1 **{m1} kg** a **{u1} m/s**, m2 **{m2} kg** a **{u2} m/s** - **{ctype}**",
+        "mom_pos_vs_time": "Posición vs. Tiempo",
+        "mom_position_axis": "Posición (m)",
+        "mom_object1": "Objeto 1",
+        "mom_object2": "Objeto 2",
+        "mom_hover": "Tiempo: %{x:.2f} s<br>Posición: %{y:.2f} m<extra></extra>",
+        "mom_final_v1": "Velocidad final 1",
+        "mom_final_v2": "Velocidad final 2",
+        "mom_momentum": "Momento total",
+        "mom_ke_lost": "Energía cinética perdida",
         "developed_by": "Desarrollado por **Alexander Moreno Briceño** - Universidad Antonio Nariño",
     },
 }
@@ -558,3 +619,6 @@ def language_selector() -> None:
         "pages/6_Newtons_Laws.py", label=t("nav_newton"), icon=":material/fitness_center:"
     )
     st.sidebar.page_link("pages/7_Work_Energy.py", label=t("nav_energy"), icon=":material/bolt:")
+    st.sidebar.page_link(
+        "pages/8_Momentum.py", label=t("nav_momentum"), icon=":material/compare_arrows:"
+    )
