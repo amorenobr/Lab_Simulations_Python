@@ -19,6 +19,14 @@
 				{
 				requirements: ["numpy", "plotly"],
 				entrypoint: "Simulations.py",
+				streamlitConfig: {
+					"theme.base": "dark",
+					"theme.primaryColor": "#4C8BF5",
+					"theme.backgroundColor": "#0A192F",
+					"theme.secondaryBackgroundColor": "#112A46",
+					"theme.textColor": "#E6F1FF",
+					"theme.font": "sans serif",
+				},
 				files: {
 				"Simulations.py": {url: "./Simulations.py"},
 				"pages/1_Linear_Motion.py": {url: "./pages/1_Linear_Motion.py"},
@@ -39,7 +47,6 @@
 				"src/lab_simulations_python/work_energy.py": {url: "./src/lab_simulations_python/work_energy.py"},
 				"src/lab_simulations_python/momentum.py": {url: "./src/lab_simulations_python/momentum.py"},
 				"src/lab_simulations_python/i18n.py": {url: "./src/lab_simulations_python/i18n.py"},
-				".streamlit/config.toml": {url: "./.streamlit/config.toml"},
 				},	
 				},
 				document.getElementById("root")
