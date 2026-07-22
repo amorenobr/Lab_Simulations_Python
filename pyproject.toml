@@ -23,6 +23,8 @@ test = "pytest"
 lint = "ruff check ."
 fmt = "ruff format ."
 docs = "sphinx-build -b html docs/source docs/build/html"
+cov = "pytest --cov=src/lab_simulations_python --cov-report=term-missing"
+typecheck = "mypy src/lab_simulations_python"
 
 [tool.pixi.dependencies]
 python = ">=3.14.3,<3.15"
@@ -34,6 +36,8 @@ plotly = ">=6.8.0,<7"
 ruff = ">=0.15.21,<0.16"
 pre-commit = ">=4.6.0,<5"
 sphinx-book-theme = ">=1.2.0,<2"
+pytest-cov = ">=7.1.0,<8"
+mypy = ">=2.3.0,<3"
 
 [tool.ruff]
 line-length = 100
@@ -42,3 +46,10 @@ target-version = "py314"
 [tool.ruff.lint]
 select = ["E", "F", "W", "I"]
 ignore = ["E501"]
+
+[tool.coverage.run]
+source = ["src/lab_simulations_python"]
+
+[tool.mypy]
+files = ["src/lab_simulations_python"]
+ignore_missing_imports = true

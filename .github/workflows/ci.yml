@@ -15,5 +15,7 @@ jobs:
         run: pixi run ruff check .
       - name: Format check
         run: pixi run ruff format --check .
+      - name: Type check
+        run: pixi run typecheck
       - name: Tests
-        run: pixi run pytest
+        run: pixi run cov
