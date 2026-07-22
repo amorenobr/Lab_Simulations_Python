@@ -6,6 +6,7 @@ watch the results update in real time. Available in **English and Spanish** with
 one-click language toggle.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![CI](https://github.com/amorenobr/Lab_Simulations_Python/actions/workflows/ci.yml/badge.svg)](https://github.com/amorenobr/Lab_Simulations_Python/actions/workflows/ci.yml)
 
 - 🚀 **Live app:** https://amorenobr.github.io/Lab_Simulations_Python/
 - 📖 **Documentation:** https://amorenobr.github.io/Lab_Simulations_Python/docs/
@@ -22,7 +23,7 @@ values.
 visualize its trajectory. Computes time of flight, maximum height, and horizontal 
 range from the kinematic equations.
 - **Circular Motion** - A particle in uniform circular motion. Shows the circular path, the
-x/t)/y(t) components, and the linear speed, period, frequency, and centripetal acceleration.
+x(t)/y(t) components, and the linear speed, period, frequency, and centripetal acceleration.
 - **Damped Harmonic Oscillator** - A mass on a spring. Vary the mass, stiffness, 
 and damping to move between undamped, underdamped, critically damped, and overdamped 
 motion.
@@ -55,29 +56,20 @@ Then open the URL shown in the terminal.
 
 ## Development
 
-Run the tests:
+Common tasks are defined as [Pixi tasks](https://pixi.sh):
 
 ```bash
-pixi run pytest
+pixi run app		# launch the app
+pixi run test		# run the tests
+pixi run cov		# tests with a coverage report
+pixi run lint		# lint with Ruff
+pixi run fmt		# format with Ruff
+pixi run typecheck	# type-check with mypy
+pixi run docs		# build the Sphinx docs (output in docs/build/html)
 ```
 
-Build the documentation:
-
-```bash
-cd docs && pixi run make html
-```
-
-The HTML output is written to `docs/build/html`.
-
-Lint and format the code:
-
-```bash
-pixi run ruff check .
-pixi run ruff format .
-```
-
-Ruff runs automatically on every commit via pre-commit.
-After cloning, enable the hook once:
+Every push and pull request runs CI (lint, format check, type check, and tests). Locally, Ruff also runs on
+each commit via pre-commit. Enable it once after cloning:
 
 ```bash
 pixi run pre-commit install
@@ -103,6 +95,8 @@ Lab_Simulations_Python/
 - [Sphinx](https://www.sphinx-doc.org) — documentation
 - [Pixi](https://pixi.sh) — environment management
 - [Ruff](https://docs.astral.sh/ruff/) — linting and formatting
+- [mypy](https://www.mypy-lang.org/) — static type checking
+- [GitHub Actions](https://github.com/features/actions) — CI/CD (tests, linting, deployment)
 
 ## License
 
