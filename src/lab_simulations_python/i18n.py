@@ -15,6 +15,7 @@ TRANSLATIONS = {
         "nav_newton": "Newton's Laws",
         "nav_energy": "Work and Energy",
         "nav_momentum": "Momentum",
+        "nav_data": "Data Analysis",
         "landing_body": """
             This is an interactive collection of physics lab simulations designed to explore key concepts
             in classical mechanics. Each simulation allows you to adjust different physical parameters
@@ -285,6 +286,70 @@ TRANSLATIONS = {
         "mom_final_v2": "Final Velocity 2",
         "mom_momentum": "Total Momentum",
         "mom_ke_lost": "Kinetic Energy Lost",
+        # --- Data Analysis ---
+        "da_title": "Data Analysis: Recovering Physical Constants",
+        "da_intro": """
+        Every simulation in this collection assumes you already know the physics. A real laboratory works the
+        other way around, you **measure**, and the constant is what you are trying to find.
+
+        This page simulates a measurement, data with realistic random error, and then recovers the physical
+        quantity from it by **least squares**. The unifying trick is **linearization**, rewrite the physical
+        law so it becomes a straight line, and the slope carries the constant you want.
+
+        | Experiment | Plot | Slope gives |
+        | --- | --- | --- |
+        | Free Fall | $d$ against $t^2$ | $g = 2m$ |
+        | Damped Oscillator | $\\ln A$ against $t$ | $b = -2Mm$ |
+        | Projectile | $R$ against $\\sin 2\\theta$ | $v_0 = \\sqrt{gm}$ |
+
+        Two things to watch. The **residual plot** should show scatter with no pattern, a visible curve means
+        the model is wrong, not just noisy. And the recovered value comes with an **uncertainty**, a good
+        measurement lands within about one or two standard errors of the truth, which the deviation in
+        $\\sigma$ reports directly.
+
+        Choose an experiment in the sidebar, set the true value and the measurement noise, then click
+        **Run Simulation**.
+        """,
+        "da_experiment": "Experiment",
+        "da_exp_free_fall": "Free Fall",
+        "da_exp_oscillator": "Damped Oscillator",
+        "da_exp_projectile": "Projectile Range",
+        "da_seed": "Random Seed",
+        "da_true_gravity": "True Gravity (m/s²)",
+        "da_true_damping": "True Damping Coefficient b (kg/s)",
+        "da_true_velocity": "True Launch Speed (m/s)",
+        "da_amplitude": "Initial Amplitude (m)",
+        "da_noise_dist": "Distance Noise (m)",
+        "da_noise_amp": "Amplitude Noise (m)",
+        "da_noise_range": "Range Noise (m)",
+        "da_n_points": "Number of Measurements",
+        "da_n_peaks": "Number of Peaks Measured",
+        "da_n_angles": "Number of Launch Angles",
+        "da_q_gravity": "gravity",
+        "da_q_damping": "damping coefficient",
+        "da_q_velocity": "launch speed",
+        "da_ff_x": "Time Squared t² (s²)",
+        "da_ff_y": "Distance Fallen (m)",
+        "da_osc_x": "Time (s)",
+        "da_osc_y": "ln (Amplitude)",
+        "da_proj_x": "sin(2$\\theta$)",
+        "da_proj_y": "Horizontal Range (m)",
+        "da_current_params": "Measuring **{q}**: true value **{v} {u}** from **{n}** measurements",
+        "da_data_and_fit": "Measurements and Least-Squares Fit",
+        "da_residual_plot": "Residuals",
+        "da_measured": "Measured",
+        "da_fit_line": "Least-Squares Fit",
+        "da_residuals": "Residual",
+        "da_hover": "x: %{x:.3f}<br>y: %{y:.3f}<extra></extra>",
+        "da_residual_hover": "x: %{x:.3f}<br>Residual: %{y:.4f}<extra></extra>",
+        "da_plot_title": "Linearized Data with Fitted Line",
+        "da_residual_title": "Residuals About the Fit",
+        "da_noise_floor": "The amplitude has fallen below the measurement noise. The last peaks carry no signal, so the fit is unreliable. Reduce the damping, the number of peaks, or the noise.",
+        "da_complete": "Fit complete. Recovered the {q} from the simulated measurements",
+        "da_recovered": "Recovered Value",
+        "da_true": "True Value",
+        "da_deviation": "Deviation",
+        "da_r_squared": "R",
         "developed_by": "Developed by **Alexander Moreno Briceño** - Universidad Antonio Nariño",
     },
     "es": {
@@ -299,6 +364,7 @@ TRANSLATIONS = {
         "nav_newton": "Leyes de Newton",
         "nav_energy": "Trabajo y Energía",
         "nav_momentum": "Momento Lineal",
+        "nav_data": "Análisis de Datos",
         "landing_body": """
             Esta es una colección interactiva de simulaciones de laboratorio de física diseñada para explorar
             conceptos clave de la mecánica clásica. Cada simulación te permite ajustar diferentes parámetros
@@ -571,6 +637,70 @@ TRANSLATIONS = {
         "mom_final_v2": "Velocidad final 2",
         "mom_momentum": "Momento total",
         "mom_ke_lost": "Energía cinética perdida",
+        # --- Data Analysis ---
+        "da_title": "Análisis de Datos: Extrayendo Constantes Físicas",
+        "da_intro": """
+        Todas las simulaciones de esta colección suponen que ya conoces la física que hay detrás. Un laboratorio
+        real funciona al revés, tu **mides**, y la constante es justamente lo que quieres encontrar.
+
+        Esta página simula una medición, datos con error aleatorio realistas, y luego extrae la cantidad física
+        usando **mínimos cuadrados**. Se reescribe la ley física para obtener una línea recta, y su pendiente
+        definea la constante que se busca.
+
+        | Experimento | Gráfica | La pendiente es |
+        | --- | --- | --- |
+        | Caída Libre | $d$ contra $t^2$ | $g = 2m$ |
+        | Oscilador Amortiguado | $\\ln A$ against $t$ | $b = -2Mm$ |
+        | Proyectil | $R$ contra $\\sin 2\\theta$ | $v_0 = \\sqrt{gm}$ |
+
+        Dos cosas para tener en cuenta. La **gráfica de residuos** debe mostrar una dispersión sin patrón
+        alguno definido. Una curva visible significa que el modelo está mal, no solo que hay ruido. Y el valor
+        extraído tiene una **incertidumbre**, una buena medición cae dentro de uno o dos errores estándar del
+        valor verdadero, que es lo que reporta la desviación en $\\sigma$.
+
+        Elige un experimento en la barra lateral, fija el valor verdadero y el ruido de medición, y haz click
+        en **Ejecutar Simulación**.
+        """,
+        "da_experiment": "Experimento",
+        "da_exp_free_fall": "Caída Libre",
+        "da_exp_oscillator": "Oscilador Amortiguado",
+        "da_exp_projectile": "Alcance del Proyectil",
+        "da_seed": "Seed Aleatorio",
+        "da_true_gravity": "Gravedad Verdadera (m/s²)",
+        "da_true_damping": "Coeficiente de Amortiguamiento Verdadero b(kg/s)",
+        "da_true_velocity": "Rapidez de Lanzamiento Verdadera (m/s)",
+        "da_amplitude": "Amplitud Inicial (m)",
+        "da_noise_dist": "Ruido en la Distancia (m)",
+        "da_noise_amp": "Ruido en la Amplitud (m)",
+        "da_noise_range": "Ruido en el Alcance (m)",
+        "da_n_points": "Número de Mediciones",
+        "da_n_peaks": "Número de Picos Medidos",
+        "da_n_angles": "Número de Ángulos de Lanzamiento",
+        "da_q_gravity": "Gravedad",
+        "da_q_damping": "Coeficiente de amortiguamiento",
+        "da_q_velocity": "Rapidez de lanzamiento",
+        "da_ff_x": "Tiempo al Cuadrado t² (s²)",
+        "da_ff_y": "Distancia Recorrida (m)",
+        "da_osc_x": "Tiempo (s)",
+        "da_osc_y": "ln (Amplitud)",
+        "da_proj_x": "sin(2$\\theta$)",
+        "da_proj_y": "Alcance Horizontal (m)",
+        "da_current_params": "Midiendo **{q}**: valor verdadero **{v} {u}** a partir de **{n}** mediciones",
+        "da_data_and_fit": "Mediciones y Ajuste por Mínimos Cuadrados",
+        "da_residual_plot": "Residuos",
+        "da_measured": "Medido",
+        "da_fit_line": "Ajuste por Mínimos Cuadrados",
+        "da_residuals": "Residuo",
+        "da_hover": "x: %{x:.3f}<br>y: %{y:.3f}<extra></extra>",
+        "da_residual_hover": "x: %{x:.3f}<br>Residuo: %{y:.4f}<extra></extra>",
+        "da_plot_title": "Datos Linealizados con la Línea Ajustada",
+        "da_residual_title": "Residuos Respecto al Ajuste",
+        "da_noise_floor": "La amplitud cayó por debajo del ruido de medición. Los últimos picos no llevan señal, así que el ajuste no es confiable. Reduce el amortiguamiento, el número de picos o el ruido.",
+        "da_complete": "Ajuste completo. Se extrajo {q} a partir de las mediciones simuladas",
+        "da_recovered": "Valor Extraído",
+        "da_true": "Valor Verdadero",
+        "da_deviation": "Desviación",
+        "da_r_squared": "R",
         "developed_by": "Desarrollado por **Alexander Moreno Briceño** - Universidad Antonio Nariño",
     },
 }
@@ -621,3 +751,4 @@ def language_selector() -> None:
     st.sidebar.page_link(
         "pages/8_Momentum.py", label=t("nav_momentum"), icon=":material/compare_arrows:"
     )
+    st.sidebar.page_link("pages/9_Data_Analysis.py", label=t("nav_data"), icon="📈")
