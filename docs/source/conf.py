@@ -8,7 +8,7 @@
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path("../..", "src/lab_simulations_python").resolve()))
+sys.path.insert(0, str(Path("../..", "src").resolve()))
 
 project = "Lab Simulations"
 copyright = "2026, Alexander Moreno Briceño"

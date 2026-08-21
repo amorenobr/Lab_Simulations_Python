@@ -27,12 +27,12 @@ experiment = st.sidebar.radio(
     ("free_fall", "oscillator", "projectile"),
     format_func=lambda key: t(f"da_exp_{key}"),
 )
-seed = int(st.sidebar.number_input(t("da_Seed"), min_value=0, max_value=9999, value=42, step=1))
+seed = int(st.sidebar.number_input(t("da_seed"), min_value=0, max_value=9999, value=42, step=1))
 
 if experiment == "free_fall":
     true_value = st.sidebar.slider(t("da_true_gravity"), 1.0, 25.0, 9.81, step=0.01)
     noise = st.sidebar.slider(t("da_noise_dist"), 0.0, 1.0, 0.10, step=0.01)
-    n_points = st.sidebar_slider(t("da_n_points"), 5, 60, 20)
+    n_points = st.sidebar.slider(t("da_n_points"), 5, 60, 20)
 
     x, y = measure_free_fall(true_value, noise, n_points, seed=seed)
     result = fit_free_fall(x, y)
@@ -45,7 +45,7 @@ elif experiment == "oscillator":
     true_value = st.sidebar.slider(t("da_true_damping"), 0.1, 0.8, 0.40, step=0.05)
     amplitude = st.sidebar.slider(t("da_amplitude"), 0.5, 5.0, 2.0, step=0.1)
     noise = st.sidebar.slider(t("da_noise_amp"), 0.0, 0.02, 0.005, step=0.001)
-    n_points = st.sidebar_slider(t("da_n_peaks"), 4, 10, 8)
+    n_points = st.sidebar.slider(t("da_n_peaks"), 4, 10, 8)
 
     x, y = measure_oscillator(
         mass, spring_constant, true_value, noise, n_points, amplitude=amplitude, seed=seed
@@ -57,7 +57,7 @@ elif experiment == "oscillator":
 else:
     true_value = st.sidebar.slider(t("da_true_velocity"), 5.0, 50.0, 20.0, step=0.5)
     noise = st.sidebar.slider(t("da_noise_range"), 0.0, 5.0, 1.0, step=0.1)
-    n_points = st.sidebar_slider(t("da_n_angles"), 5, 40, 15)
+    n_points = st.sidebar.slider(t("da_n_angles"), 5, 40, 15)
 
     x, y = measure_projectile(true_value, noise, n_points, seed=seed)
     result = fit_projectile(x, y)
@@ -161,7 +161,7 @@ if st.button(t("run_simulation")):
 
     col1, col2, col3, col4 = st.columns(4)
     col1.metric(
-        t("da_covered"),
+        t("da_recovered"),
         f"{result['value']:.3f} {unit}",
         delta=f"±{result['error']:.3f}",
         delta_color="off",

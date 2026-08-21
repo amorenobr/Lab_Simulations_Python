@@ -33,6 +33,8 @@ acceleration, and the resulting velocity and position over time.
 total mechanical energy conserved.
 - **Momentum** - A 1D collision of two objects with an elastic/inelastic toggle, showing conservation
 of momentum and the kinetic energy lost in inelastic collisions.
+- **Data Analysis** - Measure instead of assume. Generate noisy data from free fall, a damped oscillator,
+or a projectile, then recover g, the damping coefficient, or the launch speed by least squares, with residuals and an uncertainty.
 
 ## Getting Started
 

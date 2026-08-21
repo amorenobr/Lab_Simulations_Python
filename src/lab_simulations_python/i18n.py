@@ -43,6 +43,9 @@ TRANSLATIONS = {
             mechanical energy stays constant - energy conservation in action.
             - **Momentum** - Collide two objects in one dimension and see momentum conserved. Toggle between elastic
             (objects bounce, energy conserved) and inelastic (objects stick, energy lost).
+            - **Data Analysis** - Measure instead of assume. Generate noisy data from free fall, a damped
+            oscillator, or a projectile, then recover $g$, the damping coefficient, or the launch speed by
+            least squares, with residuals and an uncertainty.
 
             ### How to Use
             1. Select a simulation from the **Sidebar** on the left
@@ -394,6 +397,9 @@ TRANSLATIONS = {
             -  **Momento Lineal** - Haz chocar dos objetos en una dimensión y observa la conservación del momento.
             Alterna entre colisión elástica (los objetos rebotan, la energía se conserva) y colisión inelástica
             (los objetos quedan unidos, se pierde energía).
+            - **Análisis de Datos** - Medir en lugar de suponer. Genera datos con ruido de caída libre, un
+            oscilador amortiguado o un proyectil, y extrae $g$, el coeficiente de amortiguamiento o la rapidez
+            de lanzamiento por mínimos cuadrados, con residuos e incertidumbre.
 
             ### Cómo usar la app
             1. Selecciona una simulación en la **barra lateral** de la izquierda

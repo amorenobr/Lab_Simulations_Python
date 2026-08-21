@@ -88,6 +88,19 @@ the conserved momentum, and the kinetic energy lost. The underlying calculations
 :mod:`momentum` module.
 
 
+Data Analysis
+~~~~~~~~~~~~~
+
+Inverts the usual direction of the other simulations, rather than assuming a physical constant and predicting
+the motion, it generates noisy measurements and recovers the constant from them by ordinary least squares. Each
+experiment is linearized so that a straight line applies, free fall as :math:`d` against :math:`t^2` with slope
+:math:`g/2`, the damped oscillator as :math:`\ln A` against :math:`t` with slope :math:`-\gamma` where
+:math:`b = 2m\gamma`, and projectile range as :math:`R` against :math:`\sin 2\theta` with slope :math:`v_0^2/g`.
+The app plots the data with its fitted line and the residuals, and reports the recovered value with the standard
+error of the slope propagated into it. The underlying calculations are implemented in the :mod:`data_analysis`
+module.
+
+
 API Reference
 ~~~~~~~~~~~~~
 
