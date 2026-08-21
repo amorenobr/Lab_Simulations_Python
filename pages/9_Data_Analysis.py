@@ -117,7 +117,7 @@ if st.button(t("run_simulation")):
         gridcolor="lightgray",
         zeroline=False,
     )
-    st.plotly_chart(fig, witdh="stretch")
+    st.plotly_chart(fig, width="stretch")
 
     st.subheader(t("da_residual_plot"))
 
@@ -151,7 +151,7 @@ if st.button(t("run_simulation")):
         gridcolor="lightgray",
         zeroline=False,
     )
-    st.plotly_chart(fig_residual, witdh="stretch")
+    st.plotly_chart(fig_residual, width="stretch")
 
     # Results
     st.subheader(t("sim_results"))
