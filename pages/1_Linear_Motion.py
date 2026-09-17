@@ -14,10 +14,10 @@ st.markdown(t("lm_intro"))
 
 # Sidebar for inputs
 st.sidebar.header(t("sim_parameters"))
-position_input = st.sidebar.slider(t("lm_position"), 0.0, 100.0, 20.0)
-velocity_input = st.sidebar.slider(t("lm_velocity"), 0.0, 100.0, 20.0)
-acceleration_input = st.sidebar.slider(t("lm_acceleration"), 0.0, 30.0, 5.0)
-time_input = st.sidebar.slider(t("time_s"), 0.0, 100.0, 10.0)
+position_input = st.sidebar.slider(t("lm_position"), -100.0, 100.0, 20.0, step=1.0)
+velocity_input = st.sidebar.slider(t("lm_velocity"), -100.0, 100.0, 20.0, step=1.0)
+acceleration_input = st.sidebar.slider(t("lm_acceleration"), -30.0, 30.0, 5.0, step=0.5)
+time_input = st.sidebar.slider(t("time_s"), 0.0, 100.0, 10.0, step=1.0)
 
 st.write(
     t("lm_current_params").format(
